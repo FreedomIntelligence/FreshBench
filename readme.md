@@ -56,6 +56,14 @@ cd C:\Users\jijivski\Desktop\local_VS\fresh_eval
 python C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py
 '''
 
+@misc{cmedbenchmark,
+  title={Evaluating LLMs at Evaluating Temporal Generalization},
+  author={Chenghao Zhu, Nuo Chen, Yufei Gao, Benyou Wang},
+  year = {2024},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/FreedomIntelligence/FreshBench}},
+}
 
 
 
