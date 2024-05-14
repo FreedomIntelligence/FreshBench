@@ -60,7 +60,7 @@ python C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py
 Please use the following citation if you intend to use our repo:
 
 ```
-@misc{cmedbenchmark,
+@misc{FreshBench,
   title={Evaluating LLMs at Evaluating Temporal Generalization},
   author={Chenghao Zhu, Nuo Chen, Yufei Gao, Benyou Wang},
   year = {2024},
