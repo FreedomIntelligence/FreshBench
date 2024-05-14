@@ -56,6 +56,10 @@ cd C:\Users\jijivski\Desktop\local_VS\fresh_eval
 python C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py
 '''
 
+##  Citation
+Please use the following citation if you intend to use our repo:
+
+```
 @misc{cmedbenchmark,
   title={Evaluating LLMs at Evaluating Temporal Generalization},
   author={Chenghao Zhu, Nuo Chen, Yufei Gao, Benyou Wang},
@@ -64,7 +68,7 @@ python C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/FreedomIntelligence/FreshBench}},
 }
-
+```
 
 
 
