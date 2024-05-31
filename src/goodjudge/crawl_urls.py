@@ -2,7 +2,6 @@
 from request_one_question import craw_gjopen
 import json
 import time
-import pdb
 import csv
 import tqdm
 
@@ -17,7 +16,6 @@ with open ('gjo_no_dup.jsonl','r',encoding='utf-8') as f:
 
     
 print(len(urls),len(set(urls)),urls[0])
-# pdb.set_trace()
 
 
 

@@ -148,3 +148,8 @@ if __name__ == '__main__':
         #     writer.writerow({'Question': question_heading, 'Started': started_time, 'Closed': closed_time, 'Challenges': challenges_list, 'Tags': tags_list, 'Description': description, 'Possible Answer': possible_answer, 'Correct?': data['Correct?'], 'Final Crowd Forecast': data['Final Crowd Forecast']})
 
     print("CSV文件已生成")
+
+
+'''
+
+'''
