@@ -7,7 +7,7 @@ import tqdm
 
 
 urls=[]
-with open ('gjo_no_dup.jsonl','r',encoding='utf-8') as f:
+with open ('gjo_no_dup_tmp.jsonl','r',encoding='utf-8') as f:
     lines=f.readlines()
     for line in lines:
         if 'http' in line:
@@ -19,7 +19,7 @@ print(len(urls),len(set(urls)),urls[0])
 
 
 
-with open('gjo.csv', 'a', newline='',encoding='utf-8') as csvfile:
+with open('gjo_tmp.csv', 'w', newline='',encoding='utf-8') as csvfile:
     fieldnames = ['Question', 'Started_time', 'Closed_time', 'Challenges_list', 'Tags_list', 'Description', 'Possible_Answers_dict']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
@@ -29,7 +29,7 @@ with open('gjo.csv', 'a', newline='',encoding='utf-8') as csvfile:
             rtns=craw_gjopen(url)
             writer.writerow(rtns)
         except:
-            import traceback
+            import traceback   
             print('error:',url)
             with open('error_url.txt','a') as f:
                 f.write(url+'\n')

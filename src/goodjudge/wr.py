@@ -5,6 +5,18 @@ import datetime
 import random
 import pdb
 import re
+import os
+
+def prepend_to_file(file_path, new_content):
+    """在文件开头添加内容"""
+
+    with open(file_path, 'r', encoding='utf-8') as file:
+        original_content = file.read()
+    
+    updated_content = new_content + original_content
+    
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(updated_content)
 
 def clean_special_char(text = "your text with special characters like \u200b\u200c\n\t."):
 # 
@@ -37,6 +49,24 @@ def random_scroll(page, max_scrolls):
         random_wait = random.uniform(0.5, 3.0)
         page.wait_for_timeout(int(random_wait * 1000))
 
+def get_last_10_url_list():
+    if not os.path.exists('gjo.jsonl'):
+        print('gjo.jsonl not exist')    
+        return []
+    else:
+        try:
+            last_10_url_list=[]
+            with open('gjo.jsonl','r') as f:
+                lines=f.readlines()
+                for line in lines[:10]:
+                    if 'http' in line:
+                        last_10_url_list.append(line.strip().strip('"'))
+            return last_10_url_list
+        except:
+            print('error in get_last_10_url_list')
+            return []
+
+
 def run(playwright,config):
     # browser = playwright.chromium.launch(headless=False)
     browser = playwright.chromium.launch(headless=config['headless'],executable_path='C:\Program Files\Google\Chrome\Application\chrome.exe')
@@ -48,7 +78,10 @@ def run(playwright,config):
     page = context.new_page()
     page.goto(f"https://www.gjopen.com/leaderboards/questions", timeout=120000)
 
-    page.get_by_label("Email").fill("2281255574@qq.com")
+    # page.get_by_label("Email").fill("2281255574@qq.com")
+    page.get_by_label("Email").fill("almight163@163.com")
+
+    
     page.get_by_label("Password").click()
     # page.get_by_label("Password").click()
 
@@ -56,12 +89,16 @@ def run(playwright,config):
     print(f'sleeping for {sleep_time} seconds')
     import time
     time.sleep(sleep_time)
-    page.get_by_label("Password").fill("Fresh_bench123!")
+    # page.get_by_label("Password").fill("Fresh_bench123!")
+    page.get_by_label("Password").fill("Gjo@123456789")
+    # breakpoint()
 
     page.get_by_role("button", name="Sign in").click()
+    
+
 
     
-    for page_ in range(5,256):
+    for page_ in range(500):
         # page_=1
         with open(config['save_path'], "a", encoding="utf-8") as file:
             # for entry in data:
@@ -84,7 +121,7 @@ def run(playwright,config):
         import pdb
         # news_links = page.query_selector_all("a:has(> u.StretchedBox)")
         # news_links = page.query_selector_all("a:has(> h3)")
-        
+        end_this_fetch_flag=False
         try:
             # click_button_if_exists(page)
             # text_blocks = extract_text(page, "div[class='caas-body'] p")#, ul[class=]
@@ -97,11 +134,21 @@ def run(playwright,config):
             for i in JSHandle_list:
                 part_url=i.evaluate('(element) => element.getAttribute("href")')
                 url='https://www.gjopen.com/'+part_url.replace('/leaderboards/','')
+
+                if url in config['last_10_url_list']:
+                    print('seem to end')
+                    # breakpoint()
+
+                    end_this_fetch_flag=True
+                    break
+
                 url_list.append(url)
                 with open(config['save_path'], "a", encoding="utf-8") as file:
                     # for entry in data:
                     json.dump(url, file, ensure_ascii=False)
                     file.write("\n")
+            if end_this_fetch_flag:
+                break
         except:
             import traceback
             with open('log.log') as f:
@@ -124,8 +171,11 @@ def run(playwright,config):
 def wr_gjo(config=None):
     if  config is None:
         config={}
-        config['save_path']='./gjo.jsonl'
+        config['save_path']='./gjo_tmp.jsonl'
     config['headless']=False
+    config['last_10_url_list']=get_last_10_url_list()
+    breakpoint()    
+
     with sync_playwright() as playwright:
         run(playwright,config)
 wr_gjo()
