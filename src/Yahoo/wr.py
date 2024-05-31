@@ -52,8 +52,8 @@ def run(playwright,config):
     # news_links = page.query_selector_all("a[data-testid='internal-link']")
 
     # news_links = page.query_selector_all("div[class='Pos(r) Z(2) Fw(b)'] h3 a")
-    import pdb
-    pdb.set_trace()
+    # import pdb
+    # pdb.set_trace()
     # news_links = page.query_selector_all("a:has(> u.StretchedBox)")
     news_links = page.query_selector_all("a:has(> h3)")
     

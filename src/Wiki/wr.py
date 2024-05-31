@@ -92,7 +92,7 @@ def run(playwright,config):
 def wr_wiki(config=None):
     if config is None:
         config={}
-        config['max_scrolls']=7
+        config['max_scrolls']=30
         config['save_path']='.data/Wiki_data.jsonl'
     with sync_playwright() as playwright:
         run(playwright,config)

@@ -16,7 +16,15 @@ dev_error_msg = "Please check the url again, for valid story id. Contact the dev
 """
 https://www.wattpad.com/api/v3/stories/{{story_id}}?drafts=0&mature=1&include_deleted=1&fields=id,title,createDate,modifyDate,voteCount,readCount,commentCount,description,url,firstPublishedPart,cover,language,isAdExempt,user(name,username,avatar,location,highlight_colour,backgroundUrl,numLists,numStoriesPublished,numFollowing,numFollowers,twitter),completed,isPaywalled,paidModel,numParts,lastPublishedPart,parts(id,title,length,url,deleted,draft,createDate),tags,categories,rating,rankings,tagRankings,language,storyLanguage,copyright,sourceLink,firstPartId,deleted,draft,hasBannedCover,length
 """
-
+def random_scroll(page, max_scrolls=5):
+    for _ in range(max_scrolls):
+        # Scroll to a random position on the page
+        scroll_height = random.randint(500, 10000)
+        page.evaluate(f"window.scrollBy(0, {scroll_height})")
+        
+        # Wait for a random amount of time
+        random_wait = random.uniform(0.5, 3.0)
+        page.wait_for_timeout(int(random_wait * 1000))
 def get_chapter_id(url):
     """Extracts the chapter ID from the given URL."""
     search_id = re.compile(r'\d{5,}')
@@ -29,7 +37,8 @@ def get_chapter_id(url):
 def download_webpage(url):
     """Downloads the webpage content from the given URL."""
     try:
-        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+        
+        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36',})
         res.raise_for_status()
         return res.text
     except requests.exceptions.RequestException as exc:
@@ -117,7 +126,7 @@ def get_new_story_urls():
     # new_index_url='https://www.wattpad.com/stories/new/new'
     url = "https://www.wattpad.com/stories/new/new"
 
-    response = requests.get(url,headers={'User-Agent': 'Mozilla/5.0'})
+    response = requests.get(url,headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36',})
     soup = BeautifulSoup(response.text, 'html.parser')
 
     story_urls = []
@@ -136,7 +145,8 @@ def rq_wattpad(config=None):
     if  config is None:
         config['save_path']='wattpad_data.jsonl'
     story_urls=get_new_story_urls()
-    for urls in story_urls[:100]:
+    print(f'len(story_urls):{len(story_urls)}')
+    for urls in story_urls[:1000]:
         with open(config['save_path'], "a", encoding="utf-8") as file:
             # for entry in data:
             entry=main(urls)

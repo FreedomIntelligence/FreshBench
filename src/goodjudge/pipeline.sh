@@ -8,3 +8,4 @@ python crawl_urls.py
 python make_json_for_harness.py
 # make json for harness in gjo.json
 
+export HF_ENDPOINT=https://hf-mirror.com

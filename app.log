@@ -703,3 +703,279 @@ requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(10060,
 2024-02-28 18:16:16,113 - root - INFO - start up
 2024-02-28 18:32:10,440 - root - INFO - crawler rq_arxiv done, time_used:954.33
 >>>>>>> 75f624ed0fbc4feebfdd7533f0e1c53c4dd56a04
+2024-03-08 22:22:15,114 - root - INFO - start up
+2024-03-08 22:22:39,433 - root - INFO - start up
+2024-03-08 22:29:16,684 - root - INFO - crawler rq_github done, time_used:397.25
+2024-03-08 22:33:07,975 - root - INFO - crawler wr_wiki done, time_used:231.29
+2024-03-08 22:37:23,270 - root - INFO - crawler wr_quora done, time_used:255.3
+2024-03-08 22:37:38,563 - root - INFO - crawler praw_reddit done, time_used:15.29
+2024-03-08 22:39:14,805 - root - INFO - crawler rq_wattpad done, time_used:96.24
+2024-03-08 22:43:33,638 - root - INFO - crawler wr_Yahoo done, time_used:258.83
+2024-03-10 19:02:16,971 - root - INFO - start up
+2024-03-10 19:02:30,060 - root - INFO - crawler praw_reddit done, time_used:13.09
+2024-03-10 19:09:31,348 - root - INFO - start up
+2024-03-10 19:09:31,477 - root - ERROR -                 crawler praw_reddit failed, time_used:0.13, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 53, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 25, in praw_reddit
+    print(len(posts))
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-10 19:10:30,577 - root - INFO - start up
+2024-03-10 19:10:30,711 - root - ERROR -                 crawler praw_reddit failed, time_used:0.13, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 54, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 25, in praw_reddit
+    print(len(posts))
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-10 19:12:15,310 - root - INFO - start up
+2024-03-10 19:12:15,454 - root - ERROR -                 crawler praw_reddit failed, time_used:0.14, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 54, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 27, in praw_reddit
+    print(f'len(posts):{len(posts)}')
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-10 19:12:55,244 - root - INFO - start up
+2024-03-10 19:16:03,302 - root - INFO - crawler rq_github done, time_used:188.06
+2024-03-10 19:22:51,434 - root - INFO - start up
+2024-03-10 19:26:33,722 - root - ERROR -                 crawler wr_quora failed, time_used:222.29, error:invalid state,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 114, in wr_quora
+    run(playwright,config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 83, in run
+    box.click()
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\sync_api\_generated.py", line 2110, in click
+    self._sync(
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_element_handle.py", line 131, in click
+    await self._channel.send("click", locals_to_params(locals()))
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_connection.py", line 62, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_connection.py", line 492, in wrap_api_call
+    return await cb()
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_connection.py", line 100, in inner_send
+    result = next(iter(done)).result()
+Exception: Connection closed while reading from the driver
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 114, in wr_quora
+    run(playwright,config)
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\sync_api\_context_manager.py", line 90, in __exit__
+    self._connection.stop_sync()
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_connection.py", line 283, in stop_sync
+    self.cleanup()
+  File "C:\Users\jijivski\anaconda3\lib\site-packages\playwright\_impl\_connection.py", line 299, in cleanup
+    callback.future.set_exception(self._closed_error)
+asyncio.exceptions.InvalidStateError: invalid state
+
+2024-03-10 19:33:29,257 - root - INFO - start up
+2024-03-10 20:01:49,741 - root - ERROR -                 crawler wr_quora failed, time_used:1700.48, error:,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 116, in wr_quora
+    # for entry in data:
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 85, in run
+    new_save_path=raw_save_path[:raw_save_path.rfind('.')]+'_'+topic+raw_save_path[raw_save_path.rfind('.'):]
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 85, in run
+    new_save_path=raw_save_path[:raw_save_path.rfind('.')]+'_'+topic+raw_save_path[raw_save_path.rfind('.'):]
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2024-03-10 20:02:06,998 - root - INFO - start up
+2024-03-10 20:14:48,034 - root - ERROR -                 crawler wr_quora failed, time_used:761.04, error:,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 116, in wr_quora
+    context.close()
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 84, in run
+    # mainContent > div > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > div > div.q-click-wrapper.qu-display--block.qu-tapHighlight--none.qu-cursor--
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 84, in run
+    # mainContent > div > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > div > div.q-click-wrapper.qu-display--block.qu-tapHighlight--none.qu-cursor--
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2024-03-10 20:14:58,833 - root - INFO - start up
+2024-03-10 20:15:49,967 - root - INFO - crawler wr_quora done, time_used:51.13
+2024-03-10 20:19:10,753 - root - INFO - start up
+2024-03-10 20:28:54,745 - root - ERROR -                 crawler wr_quora failed, time_used:583.99, error:,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 127, in wr_quora
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 99, in run
+    # questions=page.query_selector_all("div[class='q-box qu-mb--tiny']")
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 99, in run
+    # questions=page.query_selector_all("div[class='q-box qu-mb--tiny']")
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2024-03-10 20:29:12,284 - root - INFO - start up
+2024-03-10 20:31:21,515 - root - INFO - crawler wr_quora done, time_used:129.23
+2024-03-10 20:34:16,526 - root - INFO - start up
+2024-03-10 20:34:37,352 - root - INFO - crawler wr_quora done, time_used:20.83
+2024-03-10 20:35:35,926 - root - INFO - start up
+2024-03-10 20:36:37,763 - root - INFO - crawler wr_quora done, time_used:61.84
+2024-03-10 20:37:08,685 - root - INFO - start up
+2024-03-10 20:45:00,890 - root - ERROR -                 crawler wr_quora failed, time_used:472.2, error:,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 133, in wr_quora
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 117, in run
+    # pdb.set_trace()
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 117, in run
+    # pdb.set_trace()
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2024-03-10 20:45:19,408 - root - INFO - start up
+2024-03-10 20:46:12,237 - root - ERROR -                 crawler wr_quora failed, time_used:52.83, error:list index out of range,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 132, in wr_quora
+    run(playwright,config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 116, in run
+    text_blocks=f"{questions_text_list[i]},'\n',{questions_text_list[i+1]}"
+IndexError: list index out of range
+
+2024-03-10 20:48:25,031 - root - INFO - start up
+2024-03-10 20:53:19,648 - root - ERROR -                 crawler wr_quora failed, time_used:294.62, error:list index out of range,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 133, in wr_quora
+    run(playwright,config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 117, in run
+    text_blocks=f"{questions_text_list[i]},'\n',{questions_text_list[i+1]}"
+IndexError: list index out of range
+
+2024-03-10 21:00:20,349 - root - INFO - start up
+2024-03-10 21:00:21,577 - root - ERROR -                 crawler praw_reddit failed, time_used:1.22, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 27, in praw_reddit
+    print(f'len(posts):{len(posts)}')
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-10 21:00:36,562 - root - INFO - start up
+2024-03-10 21:00:36,700 - root - ERROR -                 crawler praw_reddit failed, time_used:0.14, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 55, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 27, in praw_reddit
+    print(f'len(posts):{len(posts)}')
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-10 21:16:49,505 - root - INFO - start up
+2024-03-10 21:17:38,098 - root - INFO - crawler rq_wattpad done, time_used:48.59
+2024-03-10 21:25:18,341 - root - INFO - start up
+2024-03-10 21:25:39,648 - root - INFO - start up
+2024-03-10 21:28:26,269 - root - INFO - crawler wr_wiki done, time_used:166.62
+2024-03-10 21:30:30,581 - root - INFO - start up
+2024-03-10 21:31:43,715 - root - INFO - crawler rq_wattpad done, time_used:73.13
+2024-03-10 23:14:42,894 - root - INFO - start up
+2024-03-10 23:14:44,325 - root - ERROR -                 crawler praw_reddit failed, time_used:1.43, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 61, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 27, in praw_reddit
+    print(f'len(posts):{len(posts)}')
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-11 10:23:26,678 - root - INFO - start up
+2024-03-11 10:23:27,998 - root - ERROR -                 crawler praw_reddit failed, time_used:1.31, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 61, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 27, in praw_reddit
+    print(f'len(posts):{len(posts)}')
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-11 10:32:59,799 - root - INFO - start up
+2024-03-11 10:32:59,940 - root - ERROR -                 crawler praw_reddit failed, time_used:0.14, error:object of type 'ListingGenerator' has no len(),trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 61, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 27, in praw_reddit
+    print(f'len(posts):{len(posts)}')
+TypeError: object of type 'ListingGenerator' has no len()
+
+2024-03-11 10:38:12,956 - root - INFO - start up
+2024-03-11 10:41:54,709 - root - ERROR -                 crawler praw_reddit failed, time_used:221.74, error:,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 61, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 34, in praw_reddit
+    all+=1
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 34, in praw_reddit
+    all+=1
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2024-03-11 10:41:59,284 - root - INFO - start up
+2024-03-11 10:42:35,277 - root - ERROR -                 crawler praw_reddit failed, time_used:35.99, error:,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 61, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 41, in praw_reddit
+    if len(post.selftext)>50:
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\reddit\praw.py", line 41, in praw_reddit
+    if len(post.selftext)>50:
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Users\jijivski\anaconda3\lib\bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+2024-03-11 10:42:40,525 - root - INFO - start up
+2024-03-11 10:42:54,209 - root - INFO - crawler praw_reddit done, time_used:13.68
+2024-03-11 10:44:54,126 - root - INFO - start up
+2024-03-11 10:45:38,957 - root - INFO - crawler rq_wattpad done, time_used:44.83
+2024-03-11 22:03:47,223 - root - INFO - start up
+2024-03-11 22:03:49,745 - root - ERROR -                 crawler rq_wattpad failed, time_used:2.52, error:[Errno 2] No such file or directory: './data/2024-03-11/rq_wattpad/rq_wattpad.jsonl',trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 60, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\wattpad\rq.py", line 142, in rq_wattpad
+    with open(config['save_path'], "a", encoding="utf-8") as file:
+FileNotFoundError: [Errno 2] No such file or directory: './data/2024-03-11/rq_wattpad/rq_wattpad.jsonl'
+
+2024-03-11 22:04:38,545 - root - INFO - start up
+2024-03-11 22:04:49,882 - root - INFO - start up
+2024-03-11 22:04:53,820 - root - ERROR -                 crawler rq_wattpad failed, time_used:3.94, error:[Errno 2] No such file or directory: './data/2024-03-11/rq_wattpad/rq_wattpad.jsonl',trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 60, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\wattpad\rq.py", line 142, in rq_wattpad
+    with open(config['save_path'], "a", encoding="utf-8") as file:
+FileNotFoundError: [Errno 2] No such file or directory: './data/2024-03-11/rq_wattpad/rq_wattpad.jsonl'
+
+2024-03-11 22:06:29,251 - root - INFO - start up
+2024-03-11 22:06:52,648 - root - INFO - start up
+2024-03-11 22:08:03,971 - root - INFO - start up
+2024-03-11 22:09:57,409 - root - INFO - crawler wr_wiki done, time_used:113.44
+2024-03-11 22:10:20,834 - root - INFO - crawler praw_reddit done, time_used:23.42
+2024-03-11 22:11:55,647 - root - INFO - crawler rq_wattpad done, time_used:94.81
+2024-03-11 22:12:52,122 - root - INFO - crawler wr_Yahoo done, time_used:56.47
+2024-03-11 22:15:34,729 - root - INFO - start up
+2024-03-11 22:20:30,814 - root - INFO - crawler wr_Yahoo done, time_used:296.08
+2024-03-11 22:23:34,317 - root - INFO - start up
+2024-03-11 22:26:21,675 - root - ERROR -                 crawler wr_quora failed, time_used:167.36, error:list index out of range,trackback:Traceback (most recent call last):
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\cmd_crawl.py", line 67, in <module>
+    crawler(config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 133, in wr_quora
+    run(playwright,config)
+  File "C:\Users\jijivski\Desktop\local_VS\fresh_eval\src\quora\wr.py", line 117, in run
+    text_blocks=f"{questions_text_list[i]},'\n',{questions_text_list[i+1]}"
+IndexError: list index out of range
+

@@ -11,7 +11,7 @@ from src.github.rq import rq_github as rq_github
 
 # from src.checkFile.check_crawl import check_crawl
 #TODO what do the check file done?
-from src.checkFile.check_crawl import test_check_files_exist
+# from src.checkFile.check_crawl import test_check_files_exist
 
 import os
 import datetime
@@ -29,22 +29,36 @@ doday=datetime.datetime.now().strftime("%Y-%m-%d")
 os.makedirs(f"./data/{doday}", exist_ok=True)
 
 # crawl_list=[rq_github,wr_wiki,wr_quora,rq_arxiv,praw_reddit,wr_bbc,rq_wattpad,wr_Yahoo,]#,
-crawl_list=[praw_reddit,]#,rq_github,wr_wiki,wr_quorawr_Yahoo#wr_bbc,rq_wattpad
-crawl_list=[rq_github,wr_wiki,wr_quora,rq_arxiv,praw_reddit,wr_bbc,rq_wattpad,wr_Yahoo,]#,
+crawl_list=[praw_reddit,]#,rq_github,wr_wiki,wr_quora,wr_Yahoo#wr_bbc,rq_wattpad
+# crawl_list=[rq_github,wr_wiki,wr_quora,praw_reddit,rq_wattpad,wr_Yahoo,]#,rq_arxiv,wr_bbc
 # crawl_list=[praw_reddit,rq_wattpad,]#,rq_github,wr_wiki,wr_quorawr_Yahoo#wr_bbc
 # crawl_list=[wr_bbc,wr_quora, wr_Yahoo]
 # crawl_list=[wr_Yahoo]
+# crawl_list=[rq_github]
+# crawl_list=[wr_quora]
+crawl_list=[rq_wattpad]
+# crawl_list=[wr_wiki]
+# crawl_list=[praw_reddit]
+crawl_list=[rq_github,wr_wiki,wr_quora,praw_reddit,rq_wattpad,wr_Yahoo,]#,wr_bbc,rq_arxiv
+crawl_list=[wr_wiki,praw_reddit,rq_wattpad,wr_Yahoo,]#,wr_bbc,rq_arxiv,wr_quora
+crawl_list=[wr_Yahoo]
+crawl_list=[wr_quora]
 
-crawl_list=[rq_arxiv]
+# 更高频率: reddit检查是否时间不对,quora是否后续报错是为什么,watpadd怎么办,Yahoo需要每天爬吗,watpadd更新似乎不够快,一天一次,然后bbc的修改一下,看看到什么程度会稳定,
+# 测试bbc
+
 for crawler in crawl_list:
+    print(f"start to crawl {crawler.__name__}")
     config={}
     st_time=time.time()
-    config['save_path']=f"./data/{doday}/{crawler.__name__}.jsonl"
+    save_path_base=f'./data/{doday}/{crawler.__name__}/'
+    #check exist:
+    if not os.path.exists(save_path_base):
+        os.makedirs(save_path_base, exist_ok=True)
+        
+    config['save_path']=f"{save_path_base}{crawler.__name__}.jsonl"
     config['save_folder_pdf_arxiv']=f"./data/{doday}/{crawler.__name__}_pdfs"
-    config["topic_quora"]=['Technology','Mathematics','Health','Movies']
-    # config["topic_quora"]=['Mathematics','Health','Movies']
-
-    # config['headless']=True
+    config["topic_quora"]=['Technology','Mathematics','Health','Movies','what','how','why',]#'where','when','who','which','he','she'
     config['headless']=False
     
 
@@ -75,6 +89,7 @@ for crawler in crawl_list:
 
     except Exception as e:
         import traceback
-        logging.error(f"crawler {crawler.__name__} failed, time_used:{round(time.time()-st_time,2)}, error:{e},trackback:{traceback.format_exc()}")
+        print(f"                crawler {crawler.__name__} failed, time_used:{round(time.time()-st_time,2)}, error:{e},trackback:{traceback.format_exc()}")
+        logging.error(f"                crawler {crawler.__name__} failed, time_used:{round(time.time()-st_time,2)}, error:{e},trackback:{traceback.format_exc()}")
 
-test_check_files_exist(directory=os.path.join('data','doday'))
+# test_check_files_exist(directory=os.path.join('data','doday'))

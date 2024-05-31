@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import re
 import time
 import random
+import pdb
 
 def random_scroll(page, max_scrolls=5):
     for _ in range(max_scrolls):
@@ -72,33 +73,52 @@ def run(playwright,config= None):
     topics=config["topic_quora"]
     raw_save_path=config["save_path"]
     for topic in topics:
+        print(f"start to crawl {topic}")
         new_save_path=raw_save_path[:raw_save_path.rfind('.')]+'_'+topic+raw_save_path[raw_save_path.rfind('.'):]
         config["save_path"]=new_save_path
-        page.goto("https://www.quora.com/topic/"+topic)
-        random_scroll(page, max_scrolls=10)# TODO
-        page.wait_for_selector("span[class='q-box qu-userSelect--text']")
-        boxes=page.query_selector_all("span[class='q-box qu-userSelect--text']")
+        # page.goto("https://www.quora.com/topic/"+topic)
+        page.goto("https://www.quora.com/search?q="+topic+'&time=week&type=answer')
+        random_scroll(page, max_scrolls=10)# TODO https://www.quora.com/search?q=he&time=week&type=answer'
+        # page.wait_for_selector("span[class='q-box qu-userSelect--text']")
+        # boxes=page.query_selector_all("span[class='q-box qu-userSelect--text']")
+        # page.wait_for_selector("span[class='q-box qu-userSelect--text']")
+        # mainContent > div > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > div > div.q-click-wrapper.qu-display--block.qu-tapHighlight--none.qu-cursor--
+        # pointer.ClickWrapper___StyledClickWrapperBox-zoqi4f-0.iyYUZT > div.q-box.spacing_log_answer_content.puppeteer_test_answer_content >
+        # div > div > div.q-absolute > div
+        page.wait_for_selector("div[class='q-absolute']>div")
+        boxes=page.query_selector_all("div[class='q-absolute']>div")
+        # boxes2=page.query_selector_all("div[class='q-absolute']")
+        # boxes=page.query_selector_all("span[class='q-box qu-userSelect--text']")
         for box in boxes:
+            # pdb.set_trace()
             box.click()
             sleep_time = (round(random.uniform(0.2, 0.4), 1))
             print('click')
-        questions=page.query_selector_all("div[class='q-box qu-mb--tiny']")
+            # pdb.set_trace()
+
+        # questions=page.query_selector_all("div[class='q-box qu-mb--tiny']")
+        page.wait_for_selector("span[class='q-box qu-userSelect--text']")
+        questions=page.query_selector_all("span[class='q-box qu-userSelect--text']")
+
         questions_text_list=[]# 
         for question in questions:
             questions_text_list.append(question.inner_text())
         # <div class="q-box qu-mb--tiny" style="box-sizing: border-box;"><div class="q-text qu-dynamicFontSize--regular_title qu-fontWeight--bold qu-color--gray_dark_dim qu-passColorToLinks qu-lineHeight--regular qu-wordBreak--break-word" style="box-sizing: border-box;"><span class="CssComponent__CssInlineComponent-sc-1oskqb9-1 UserSelectableText___StyledCssInlineComponent-lsmoq4-0"><span class="CssComponent__CssInlineComponent-sc-1oskqb9-1 TitleText___StyledCssInlineComponent-sc-1hpb63h-0  hiLnej"><a class="q-box Link___StyledBox-t2xg9c-0 dFkjrQ puppeteer_test_link qu-display--block qu-cursor--pointer qu-hover--textDecoration--underline" href="https://www.quora.com/How-are-governments-and-tech-companies-addressing-concerns-about-user-privacy-in-the-digital-age" target="_blank" style="box-sizing: border-box; border-radius: inherit;"><div class="q-click-wrapper qu-display--block qu-tapHighlight--white qu-cursor--pointer qu-hover--textDecoration--underline ClickWrapper___StyledClickWrapperBox-zoqi4f-0 iyYUZT" tabindex="0" style="box-sizing: border-box; font: inherit; padding: 0px; color: inherit; text-align: inherit;"><div class="q-flex qu-flexDirection--row" style="box-sizing: border-box; display: flex;"><div class="q-inline qu-flexWrap--wrap" style="box-sizing: border-box; display: inline; max-width: 100%;"><div class="QuestionTitle___StyledText-exj38m-0 chNUqN puppeteer_test_question_title"><span class="q-box qu-userSelect--text" style="box-sizing: border-box;"><span style="background: none;">How are governments and tech companies addressing concerns about user privacy in the digital age?</span></span></div></div></div></div></a></span></span></div></div>
         # answers=page.query_selector_all("span[class='q-box qu-userSelect--text']")
-        answers_text_list=[]#
-        answers=page.query_selector_all("div[class='q-box spacing_log_answer_content puppeteer_test_answer_content']")
+        # answers_text_list=[]#
+        # answers=page.query_selector_all("div[class='q-box spacing_log_answer_content puppeteer_test_answer_content']")
 
-        for answer in answers:
-            answers_text_list.append(answer.inner_text())
-        for i in range(len(questions_text_list)):
-            print(i,"question:",questions_text_list[i],'\n',answers_text_list[i][:30])
-            text_blocks=f"{questions_text_list[i]},'\n',{answers_text_list[i]}"
-            entry = {"date": datetime.datetime.now().strftime("%Y-%m-%d-%H-%M"), "error": False, "url": questions_text_list[i],'text_blocks':text_blocks}
-            with open( config["save_path"],"a", encoding="utf-8") as file:#config['save_path'],
-                # for entry in data:
+        # for answer in answers:
+        #     answers_text_list.append(answer.inner_text())
+        # pdb.set_trace()
+        with open( config["save_path"],"a", encoding="utf-8") as file:#config['save_path'],
+            for i in range(0,len(questions_text_list),2):
+                # print(i,"question:",questions_text_list[i],'\n',questions_text_list[i+1][:30])
+                text_blocks=f"{questions_text_list[i]},'\n',{questions_text_list[i+1]}"
+                # pdb.set_trace()
+                entry = {"date": datetime.datetime.now().strftime("%Y-%m-%d-%H-%M"), "error": False, "url": questions_text_list[i],'text_blocks':text_blocks}
+                    # for entry in data:
+                # print(f'saved at {config["save_path"]}')
                 json.dump(entry, file, ensure_ascii=False)
                 file.write("\n")
         # input('check')

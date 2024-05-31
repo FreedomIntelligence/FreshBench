@@ -106,21 +106,23 @@ import json
 
 def rq_arxiv(config=None):
     
+    BEGIN_DATE =config['begin_date']
+    END_DATE =  config['end_date']
 
-    BEGIN_DATE = (datetime.datetime.now()-datetime.timedelta(days=5)).strftime("%Y-%m-%d")
-    END_DATE =  datetime.datetime.now().strftime("%Y-%m-%d")
+    # BEGIN_DATE = (datetime.datetime.now()-datetime.timedelta(days=5)).strftime("%Y-%m-%d")
+    # END_DATE =  datetime.datetime.now().strftime("%Y-%m-%d")
     PAGE_SIZE = '100'
     START = '0'
-    PAGE = 11
+    PAGE = 5
     # TYPE = '&classification-computer_science=y'
     # # TYPE = '&classification-mathematics=y'
     # TYPE = '&classification-physics=y'
 
     raw_save_path=config['save_path']
-    if 'specific_year' not in config:
-        specific_year='2018'
-    else:
-        specific_year=config['specific_year']
+    # if 'specific_year' not in config:
+    #     specific_year='2018'
+    # else:
+    #     specific_year=config['specific_year']
     types=[
     '&classification-computer_science=y',
     '&classification-mathematics=y',
@@ -159,8 +161,8 @@ eess'''
         for START in [str(i * int(PAGE_SIZE)) for i in range(PAGE)]:
         
             # url = f'https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title{TYPE}&classification-include_cross_list=exclude&date-year=&date-filter_by=date_range&date-from_date={BEGIN_DATE}&date-to_date={END_DATE}&date-date_type=submitted_date_first&abstracts=hide&size={PAGE_SIZE}&order=-announced_date_first&start={START}'
-            # url = f'https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title{TYPE}&classification-include_cross_list=exclude&date-year=&date-filter_by=date_range&date-from_date={BEGIN_DATE}&date-to_date={END_DATE}&date-date_type=submitted_date_first&abstracts=hide&size={PAGE_SIZE}&order=-announced_date_first&start={START}'
-            url = f'https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title{TYPE}&classification-include_cross_list=include&date-filter_by=specific_year&date-year={specific_year}&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size={PAGE_SIZE}&order=-announced_date_first&start={START}'
+            url = f'https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title{TYPE}&classification-include_cross_list=exclude&date-year=&date-filter_by=date_range&date-from_date={BEGIN_DATE}&date-to_date={END_DATE}&date-date_type=submitted_date_first&abstracts=hide&size={PAGE_SIZE}&order=-announced_date_first&start={START}'
+            # url = f'https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title{TYPE}&classification-include_cross_list=include&date-filter_by=specific_year&date-year={specific_year}&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size={PAGE_SIZE}&order=-announced_date_first&start={START}'
             print(f'url:{url}')
             # url = f'https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-include_cross_list=include&date-filter_by=specific_year&date-year=2023&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=100&order=-announced_date_first&start=0'
 
@@ -178,7 +180,7 @@ eess'''
             if len(pdf_links) == 0:
                 break
         print('len(path_list)',len(path_list))
-        path_list=path_list[:100]
+        path_list=path_list[:500]
         print(f'total:{len(path_list)}')
         download_pdfs_concurrently(path_list, config['save_folder_pdf_arxiv'])
         
@@ -190,7 +192,7 @@ eess'''
 
         assert begin < end
 
-        extracted_texts = extract_first_n_chars_from_pdfs(config['save_folder_pdf_arxiv'], end,pdf_limit=10)
+        extracted_texts = extract_first_n_chars_from_pdfs(config['save_folder_pdf_arxiv'], end,pdf_limit=500)
 
         extracted_texts = [text.encode('utf-8', 'ignore').decode('utf-8') for text in extracted_texts]
 
@@ -214,9 +216,17 @@ eess'''
                 print(entry)
 
 
-# if __name__ == "__main__":
-    # config['save_path']=r'arxiv_data,jsonl'
-    # rq_arxiv()
+if __name__ == "__main__":
+    config={}
+    config['begin_date']='2022-12-01'
+    config['time_delta']=20
+    time_delta = datetime.timedelta(days=config['time_delta'])
+    config['end_date']=(datetime.datetime.now()+time_delta).strftime("%Y-%m-%d")
+    config['save_folder_pdf_arxiv']='./arxiv_pdfs'
+    if not os.path.exists(config['save_folder_pdf_arxiv']):
+        os.makedirs(config['save_folder_pdf_arxiv'])
+    config['save_path']=f'{config['begin_date']}_arxiv_data.jsonl'
+    rq_arxiv(config)
 
 
 

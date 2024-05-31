@@ -132,7 +132,7 @@ def craw_gjopen(url= "https://www.gjopen.com/questions/3247-what-percentage-of-t
 if __name__ == '__main__':
     rtns=craw_gjopen('https://www.gjopen.com/questions/3247-what-percentage-of-the-vote-will-nikki-haley-receive-in-the-2024-michigan-republican-presidential-primary')
     # pdb.set_trace()
-    with open('test.csv', 'a', newline='',encoding='utf-8') as csvfile:
+    with open('test_0531.csv', 'a', newline='',encoding='utf-8') as csvfile:
 
         fieldnames = ['Question', 'Started_time', 'Closed_time', 'Challenges_list', 'Tags_list', 'Description', 'Possible_Answers_dict']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

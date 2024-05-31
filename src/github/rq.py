@@ -78,20 +78,20 @@ def get_github_repository_code(repo_url,config):
                     if item_response.status_code == 200:
 
                         item_content = item_response.text
-                        if len(item_content)>5000:
+                        if len(item_content)>50000:
                             print(f'item_content too long skip:{item["name"]}')
                             continue
                         print(f'item_content added:{item["name"]}')
                         content+=item_content+'\n\n\n'
-                        if len(content)>10000:
-                            print(f'total_content >4000:{len(content)}')
+                        if len(content)>200000:
+                            # print(f'total_content >4000:{len(content)}')
                             break
             with open(config['save_path'], 'a', encoding='utf-8') as file:
                 if not readme_content is None:
                     content=readme_content+content
                 entry = {"date": datetime.now().strftime("%Y-%m-%d-%H-%M"), "error": False, "url": repo_url,'text_blocks':content}
                 # readme_file.write(entry)
-                print(content[:20])
+                # print(content[:20])
                 json.dump(entry, file, ensure_ascii=False)
                 file.write("\n")
                 
