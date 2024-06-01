@@ -1,9 +1,4 @@
 
-
-
-
-
-
 python wr.py
 # new urls are saved at gjo_tmp.json  
 python filter.py
@@ -17,7 +12,7 @@ python make_json_for_harness.py
             # for harness in gjo_tmp.json
 
 python prepend.py --file_down_path='gjo.jsonl' --file_up_path='gjo_no_dup_tmp.jsonl' --file_final_path='gjo.jsonl'
-python prepend.py --file_down_path='gjo.csv' --file_up_path='gjo_tmp.csv' --file_final_path='gjo.csv'
+python prepend.py --file_down_path='gjo.csv' --file_up_path='gjo_tmp.csv' --file_final_path='gjo.csv' --specific_strategy='del_down_first_line'
 python prepend.py --file_down_path='gjo.json' --file_up_path='gjo_tmp.json' --file_final_path='gjo.json'
 
 rm gjo_tmp.json
@@ -25,6 +20,7 @@ rm gjo_no_dup_tmp.jsonl
 rm gjo_tmp.csv
 rm gjo_tmp.json
 
+echo "Pipeline finished and you get the final files: gjo.jsonl, gjo.csv, gjo.json"
 
 
 # export HF_ENDPOINT=https://hf-mirror.com
