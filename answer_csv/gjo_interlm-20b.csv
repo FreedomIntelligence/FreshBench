@@ -1,0 +1,2 @@
+Model_x,Release Date,model,MMLU,GSM8,Humanities,SocialSciences,STEM,Other,Longbench,Question,Model_y,Start Time,End Time,Acc,Right Possibility
+interlm-20b,2023-09-18,interlm-20b,61.85,23.0,,,,,,,,,,,

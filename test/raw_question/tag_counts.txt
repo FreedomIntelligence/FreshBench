@@ -1,0 +1,93 @@
+Business: 648
+Non-US Politics: 453
+Security and Conflict: 446
+Society: 425
+US Politics: 363
+Technology: 359
+Finance: 299
+Elections and Referenda: 288
+Economic Indicators: 273
+Foreign Policy: 271
+US Policy: 247
+Health: 245
+Leader Entry/Exit: 219
+Economic Policy: 160
+Sports: 148
+Entertainment: 148
+Environment: 80
+Open: 16
+See our FAQ to learn about how we resolve questions and how scores are calculated.: 8
+See our FAQ to learn about how we resolve questions and how scores are calculated: 4
+Fast National Ratings are typically reported on the Monday following Sunday programming. This season's Fast National viewership numbers for Sunday Night Football are as follows:: 3
+10 September 2017: 21.559 million viewers (The Futon Critic): 3
+17 September 2017: 18.460 million viewers (The Futon Critic): 3
+24 September 2017: 14.537 million viewers (The Futon Critic): 3
+1 October 2017: 14.009 million viewers (The Futon Critic): 3
+8 October 2017: 14.853 million viewers (The Futon Critic): 3
+15 October 2017: 14.423 million viewers (The Futon Critic): 3
+22 October 2017: 16.741 million viewers (The Futon Critic): 3
+29 October 2017: 12.666 million viewers The Futon Critic): 2
+Recommended Questions:: 2
+Former President Donald Trump announced that he will seek the Republican nomination for US president in 2024 (The Hill). FiveThirtyEight Founder Nate Silver speculated on Twitter whether Trump is actually running for reasons other than winning the 2024 presidential election (Twitter - Nate Silver). "Early-voting states for the Republican nomination for president" are the four states scheduled to hold Republican primaries or caucuses first. The list of pertinent states is subject to change depending on the official finalization of the schedule by the jurisdictions involved. The list will be finalized for this question no later than 31 August 2023, and if there is more than one primary scheduled for the date on which the fourth would fall, the primary for the state with the largest population would be included. For a Trump presidential campaign rally to count, it must be open to the public (though not necessarily free to attend), have reported attendance of at least 1,000, and have Donald Trump speak at the event in person (e.g., WUWM, Telegraph Herald).: 1
+Fraud against older Americans has been increasing (WSB-TV). The question will be suspended on 10 February 2023 and the outcome determined using 2022 data as reported in the FTC's 2022-2023 Protecting Older Consumers report, expected in October 2023 (FTC - Press Release). In the 2021-2022 report released in October 2022, the FTC reported that aggregate reported losses by older adults due to Business Imposters totaled $151 million in 2021 (Protecting Older Consumers 2021-2022, see page 33 in the file). Older reports are also available online (Protecting Older Consumers 2017-2018, Protecting Older Consumers 2018-2019, Protecting Older Consumers 2019-2020, Protecting Older Consumers 2020-2021).: 1
+Canada has already seen a devastating start to the wildfire season in 2023 (NASDAQ, CTV, CBC). The question will be suspended on 31 December 2023 and the outcome determined using data as first released by the Canadian Interagency Forest Fire Centre (CIFFC) in its "Canada Report" for 2023, expected in early 2024 (CIFFC - Annual Reports). In 2022, wildland fires consumed 1,656,504 hectares in Canada (CIFFC - Canada Report 2022, see page 15). A "hectare" is a metric unit of measure for area equivalent to 2.471 acres (Britannica - Hectare). Additional periodic data are available from CIFFC (CIFFC National Fire Situation Report).: 1
+The outcome will be determined by data from CoinDesk, using the "1y" chart, by dividing the price dated 29 November 2022 (PT) by the price dated 19 May 2022 (PT), which can be found here:: 1
+Bitcoin (CoinDesk - Bitcoin): $30,280.67: 1
+Cardano (Ada) (CoinDesk - Ada): $0.532500: 1
+Ethereum (CoinDesk - Ethereum): $2,017.27: 1
+Solana (CoinDesk - Solana): $52.12: 1
+XRP (Ripple) (CoinDesk - XRP): $0.414390: 1
+By midyear 2021, former President Trump's political groups had over $102 million in cash on hand (Politico, ABC News, donaldjtrump.com). The question will be suspended on 31 December 2021 and the outcome determined using data as reported by the Federal Election Commission for the second half of 2021, expected in early 2022. For the purposes of this question, the three relevant Trump-affiliated PACs are:: 1
+Save America (FEC.gov - Save America, Mid-year Report 2021): 1
+Make America Great Again Action Inc (FEC.gov - Make America Great Again Action Inc, Mid-year Report 2021): 1
+The outcome will be determined by data from CoinDesk, using the "1y" chart, by dividing the price dated 29 November 2021 (PT) by the price dated 27 May 2021 (PT), which were:: 1
+Bitcoin (CoinDesk): $38,717.77: 1
+Cardano (Ada) (CoinDesk): $1.66: 1
+Ethereum (CoinDesk): $2,774.54: 1
+XRP (Ripple) (CoinDesk): $0.979175: 1
+No Time to Die, starring Daniel Craig for the fifth time as James Bond, is the 25th installment in the Bond movie franchise (IMDb). The outcome will be determined with "Domestic Weekend" data for the weekend of 8-10 October 2021 as reported by Box Office Mojo (Box Office Mojo). If the release date is postponed beyond 2021, the question will be voided. The opening weekends for the last two Bond films totaled:: 1
+Skyfall (2012): $88,364,714: 1
+Outcome will be determined using data from Bloomberg, by dividing the end-of-day closing values for 31 July 2019 by the end-of-day closing values for 31 January 2019, which were:: 1
+DJIA (Bloomberg): 24,999.67: 1
+NASDAQ Composite (Bloomberg): 7,281.74: 1
+Russell 2000 (Bloomberg): 1,499.42: 1
+Hong Kong, Singapore, South Korea, and Taiwan have become known as the four "Asian Tigers" (iDeals Virtual Data Room, South China Morning Post, Investopedia). Outcome will be determined using data from Bloomberg, by dividing the end-of-day closing values for 28 June 2019 by the end-of-day closing values for 10 January 2019, which were:: 1
+Hong Kong's Hang Seng Index (Bloomberg): 26,521.43: 1
+Singapore's Straits Times Index (Bloomberg): 3,183.51: 1
+South Korea's KOSPI (Bloomberg): 2,063.28: 1
+Outcome will be determined by the daily closing spot price for wholesale Brent crude oil reported by the Energy Information Administration.  Experts are projecting slight increases in 2018 (Energy Information Administration, Reuters,: 1
+By a count of 7-2, the question closed with "Yes" with an end date of 14 May.: 1
+(SCOTUS): 1
+The Philadelphia Eagles won Super Bowl LII: 1
+This question will be resolved using Nielsen's Fast National Ratings data as reported on The Futon Critic in the "Sunday's Broadcast Ratings" summary of 19 November 2017.: 1
+5 November 2017: 11.673 million viewers (The Futon Critic): 1
+12 November 2017: 15.329 million viewers (The Futon Critic): 1
+This question will be resolved using Nielsen's Fast National Ratings data as reported on The Futon Critic in the "Sunday's Broadcast Ratings" summary of 12 November 2017.: 1
+5 November 2017: 11.673 million viewers (The Futon Critic ): 1
+This question will be resolved using Nielsen's Fast National Ratings data as reported on The Futon Critic in the "Sunday's Broadcast Ratings" summary of 29 October 2017.: 1
+Building dams across the Indus, Jhelum, and Chenab rivers -- whose headwaters are controlled by India but whose downstream flow is allocated to Pakistan by the Indus Water Treaty -- could increase tensions between the two countries over water (Foreign Policy, Hindustan Times, New Delhi Times).: 1
+Clarification issued 12/12/2016: The question was updated to ask about an official bilateral visit.: 1
+The IOC officially announced Paris will host the 2024 Olympics and Los Angeles will host in 2028 (Olympic Games). This question was closed as "a) Paris in 2024, Los Angeles in 2028", with an end date of 13 September.: 1
+MPLA won 150 of 220 seats. This question was closed as “a) majority” with an end date of 26 August 2017. (Africa News): 1
+March through August gross revenues exceeded 2016 revenues by 10% or more. This question closed with an answer of "d) all 6 months", with and end date of 1 September 2017.  (Macau Gaming Inspection and Co-ordination Bureau): 1
+In July 2016, Verizon Communications Inc. agreed to purchase and merge with Yahoo Inc. in a $4.8258 billion deal. The merger was supposed to be completed by March 2017, but has been delayed by the revelation of widespread hacking of 1 billion of Yahoo's users (Fortune, CBS, US News). Should a final merger deal involve Verizon offering equity as well as cash, the dollar value of the equity provided plus the cash provided will be used to calculate the final price of the deal (e.g. NY Times).: 1
+Six candidates are in the running for Iran's May 2017 presidential election (BBC, Al-Monitor, The Economist). In the event that a run-off election is required, the end date of the question will be extended.: 1
+Will Moon Jae-in win South Korea's upcoming presidential election?: 1
+South Koreans will go to the polls on 9 May 2017 to elect their new president (NY Times). Moon Jae-in ran for president in 2012, losing narrowly to Park Geun-hye. He is now the presumed front runner (NY Times, Reuters).: 1
+Who will win Iran's May 2017 Presidential Election: 1
+President-elect Trump has accused the Chinese of devaluing the renminbi (CNBC), but recently its value has been increasing relative to the dollar (Washington Post, Washington Post). Outcome will be determined by the end-of-day closing value reported by  Bloomberg. For historical trends, see Bloomberg.: 1
+Britain's vote to leave the European Union has been followed by a depreciation in the value of the British pound as investors fear a "hard" Brexit (The World in 2017). Outcome will be determined according to data provided by Bloomberg.: 1
+This question was closed as "yes" with an end date of 15 March 2017 (Federa Reserve).: 1
+This question was closed as "yes" with an end date of 4 March 2017 (Buisness Insider, Forbes, USA Today).: 1
+The parent company of the popular messaging app Snapchat has filed for an initial public offering to take place as early as March (WSJ, Business Insider, CNBC). Valuation will be based on the end-of-day share price of Snap Inc's first trading day. This question will be extended if the IPO does not occur before the question expires.: 1
+This question was closed as "yes" with an end date of 7 February 2017. Arkansas' governor signed into law an increased tax on soda (Ledger Enquirer, Arkansas Online).: 1
+The Atlanta Falcons will take on the New England Patriots in the NFL's Super Bowl LI on 5 February 2017 in Houston, Texas (NFL).: 1
+This question was closed as "yes" with an end date of 1 February 2017 (NY Times).: 1
+This question was resolves as "yes" with an end date of 27 January 2016 (US News, Yahoo! New, NY Times).: 1
+This question was closed as "Yes" with an end date of 23 January 2017. The Supreme Court ruled that an act of Parliament was required to invoke Article 50 (BBC, NY Times).: 1
+This question was closed on "Maintain" with an end date of 19 January 2017. (Wall Street Journal): 1
+This question was closed with the correct answer "Clemson" with an end date of 9 January 2017. Clemson defeated Alabama in the 2017 College Football Playoff National Championship (ESPN).: 1
+This question was closed on  'Rex Tillerson' with an end date of 13 December 2016 (CNN, Newsweek).: 1
+This question was closed as "no" with an end date of 11 December 2016. Birth of  Nation was not nominated for "Best Motion Picture". (LA Times): 1
+This question was closed with the correct answer 'Yes' with an end date of 28 November 2016. Alibaba’s market capitalisation exceeded Tencent’s on 28 November.: 1
+This question was closed with the correct answer "Laurie Hernandez and Valentin Chmerkovskiy" with an end date of 22 November 2016 (ESPN, People, Entertainment Weekly).: 1

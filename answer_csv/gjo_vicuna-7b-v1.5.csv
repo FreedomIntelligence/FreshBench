@@ -1,0 +1,2 @@
+Model_x,Release Date,model,MMLU,GSM8,Humanities,SocialSciences,STEM,Other,Longbench,Question,Model_y,Start Time,End Time,Acc,Right Possibility
+vicuna-7b-v1.5,2023-07-24,vicuna-7b-v1.5,50.82,8.1,71.3,76.0,44.6,42.8,20.39,,,,,,

@@ -1,0 +1,5 @@
+
+    Running model: baichuan-13b-chat
+    
+time python gjo_hf_local.py         --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240602/gjo_local_answer         --model_path /mntcephfs/data/med/guimingchen/models/general/baichuan-13b-chat         --model baichuan-13b-chat         --test_num 2535         >> /mntnfs/med_data5/zhuchenghao/gpt4_distil/logs/baichuan-13b-chat.log
+time python gjo_judge.py --ModelName baichuan-13b-chat          --json_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240602/gjo_local_answer/baichuan-13b-chat/gjo_with_output.json         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/answer_csv

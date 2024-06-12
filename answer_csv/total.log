@@ -1,0 +1,281 @@
+(fastllm) [zhuchenghao@pbcmlg01 script]$ python /mntnfs/med_data5/zhuchenghao/gpt4_distil/drafts/get_accs.py
+gjo_Mixtral-8x22B-Instruct-v0.1.csv: 2533 lines
+data["Acc"].mean(): 0.11216429699842022 
+
+
+
+
+gjo_gpt4_1106.csv: 2533 lines
+data["Acc"].mean(): 0.6350710900473934 
+
+
+
+
+gjo_gpt4_0613.csv: 2533 lines
+data["Acc"].mean(): 0.5671406003159558 
+
+
+
+
+gjo_gpt_3.5_turbo_0613.csv: 2533 lines
+data["Acc"].mean(): 0.46998420221169035 
+
+
+
+
+gjo_Gemini.csv: 2144 lines
+data["Acc"].mean(): 0.4400373308446104 
+
+
+
+
+gjo_Claude-3.csv: 2419 lines
+data["Acc"].mean(): 0.17204301075268819 
+
+
+
+
+gjo_DeepSeek-V2-Chat copy.csv: 2419 lines
+data["Acc"].mean(): 0.5901571546732837 
+
+
+
+
+gjo_Baichuan2-13B-Base.csv: 2533 lines
+data["Acc"].mean(): 0.4759083728278041 
+
+
+
+
+gjo_Baichuan2-13B-Chat.csv: 2533 lines
+data["Acc"].mean(): 0.4802527646129542 
+
+
+
+
+gjo_Baichuan2-7B-Base.csv: 2419 lines
+data["Acc"].mean(): 0.40736145574855254 
+
+
+
+
+gjo_Baichuan2-7B-Chat.csv: 2533 lines
+
+data["Acc"].mean(): 0.3645339652448657 
+
+
+
+
+gjo_Colossal-LLaMA-2-7b-base.csv: 2533 lines
+data["Acc"].mean(): 0.4107424960505529 
+
+
+
+
+gjo_HF_RWKV_v5-Eagle-7B.csv: 2533 lines
+data["Acc"].mean(): 0.28791469194312796 
+
+
+
+
+gjo_Llama-2-13b-hf.csv: 2533 lines
+data["Acc"].mean(): 0.49842022116903634 
+
+
+
+
+gjo_Llama-2-7b-hf.csv: 2533 lines
+data["Acc"].mean(): 0.27014218009478674 
+
+
+
+
+gjo_Qwen-14B-Chat.csv: 2533 lines
+data["Acc"].mean(): 0.3767772511848341 
+
+
+
+
+ : 2533 lines
+data["Acc"].mean(): 0.001184834123222749 
+
+
+
+
+gjo_Qwen-7B.csv: 2533 lines
+data["Acc"].mean(): 0.353870458135861 
+
+
+
+
+gjo_Qwen-7B-Chat.csv: 2533 lines
+data["Acc"].mean(): 0.0 
+
+
+
+
+gjo_Skywork-13B-base.csv: 2533 lines
+data["Acc"].mean(): 0.36018957345971564 
+
+
+
+
+gjo_TinyLlama-1.1B-Chat-v0.6.csv: 2419 lines
+data["Acc"].mean(): 0.3023159636062862 
+
+
+
+
+gjo_Yi-6B.csv: 2533 lines
+data["Acc"].mean(): 0.28199052132701424 
+
+
+
+
+gjo_Yi-6B-Chat.csv: 2533 lines
+data["Acc"].mean(): 0.37006319115323855 
+
+
+
+
+gjo_baichuan-13b-chat.csv: 2419 lines
+data["Acc"].mean(): 0.49090157154673286 
+
+
+
+
+gjo_baichuan-7b-chat.csv: 2533 lines
+data["Acc"].mean(): 0.3100315955766193 
+
+
+
+
+gjo_falcon-rw-1b.csv: 2533 lines
+data["Acc"].mean(): 0.21761453396524486 
+
+
+
+
+gjo_interlm-20b.csv: 2 lines
+data["Acc"].mean(): nan 
+
+
+
+
+gjo_internlm-chat-7b.csv: 2533 lines
+data["Acc"].mean(): 0.3424170616113744 
+
+
+
+
+gjo_llama2-7b-chat-hf.csv: 2533 lines
+data["Acc"].mean(): 0.43878357030015797 
+
+
+
+
+gjo_llama_hf_7b.csv: 2533 lines
+data["Acc"].mean(): 0.2934439178515008 
+
+
+
+
+gjo_mistral-7b-v0.1.csv: 2533 lines
+data["Acc"].mean(): 0.42338072669826227 
+
+
+
+
+gjo_opt-13b.csv: 2533 lines
+data["Acc"].mean(): 0.4656398104265403 
+
+
+
+
+gjo_opt-2.7b.csv: 2533 lines
+data["Acc"].mean(): 0.22709320695102686 
+
+
+
+
+gjo_phi-1_5.csv: 2533 lines
+data["Acc"].mean(): 0.39652448657187994 
+
+
+
+
+gjo_pythia-12b.csv: 2533 lines
+data["Acc"].mean(): 0.46208530805687204 
+
+
+
+
+gjo_vicuna-7b-v1.5.csv: 2 lines
+data["Acc"].mean(): nan 
+
+
+
+
+gjo_xverse-13b.csv: 2 lines
+data["Acc"].mean(): nan 
+
+
+
+
+gjo_zephyr-7b-beta.csv: 2533 lines
+data["Acc"].mean(): 0.38665086887835703 
+
+
+
+
+gjo_zhongjing-base.csv: 2533 lines
+data["Acc"].mean(): 0.3755924170616114 
+
+
+
+
+gjo_DeepSeek-V2-Chat_0602.csv: 2643 lines
+data["Acc"].mean(): 0.5825132475397427 
+
+
+
+
+gjo_Qwen-1_8B.csv: 2533 lines
+data["Acc"].mean(): 0.3380726698262243 
+
+
+
+
+gjo_phi-2.csv: 2533 lines
+data["Acc"].mean(): 0.3068720379146919 
+
+
+
+
+gjo_Qwen1.5-110b-chat.csv: 2533 lines
+data["Acc"].mean(): 0.5604265402843602 
+
+
+
+
+gjo_DeepSeek-V2-Chat.csv: 2532 lines
+data["Acc"].mean(): 0.5859344132753852 
+
+
+
+
+gjo_command-r-plus.csv: 2533 lines
+data["Acc"].mean(): 0.5379146919431279 
+
+
+
+
+total.log: 275 lines
+gjo_chatglm3-6b.csv: 2533 lines
+data["Acc"].mean(): 0.4087677725118483 
+
+
+
+
+gjo_Phi-3-mini-4k-instruct.csv: 2533 lines
+data["Acc"].mean(): 0.3783570300157978 

@@ -1,0 +1,35 @@
+model,"[(-40, -20), (-20, 0)]","[(-60, -40), (-20, 0)]","[(-80, -60), (-20, 0)]"
+Baichuan2-13B-Base,Nostalgia **,Nostalgia ***,Nostalgia ***
+Baichuan2-13B-Chat,Nostalgia ***,Nostalgia ***,Nostalgia ***
+Baichuan2-7B-Chat,Nostalgia **,Balanced,Balanced
+Colossal-LLaMA-2-7b-base,Nostalgia **,Balanced,Nostalgia *
+HF_RWKV_v5-Eagle-7B,Balanced,Balanced,Balanced
+Llama-2-13b-hf,Balanced,Nostalgia ***,Nostalgia ***
+Llama-2-7b-hf,Nostalgia ***,Nostalgia *,Balanced
+Mixtral-8x22B-Instruct-v0.1,Nostalgia **,Nostalgia ***,Nostalgia ***
+Phi-3-mini-4k-instruct,Balanced,Nostalgia ***,Nostalgia **
+Qwen-14B-Chat,Nostalgia **,Nostalgia **,Nostalgia ***
+Qwen-1_8B,Balanced,Balanced,Nostalgia **
+Qwen-7B,Balanced,Balanced,Balanced
+Qwen1.5-110b-chat,Nostalgia *,Nostalgia ***,Nostalgia ***
+Skywork-13B-base,Balanced,Balanced,Balanced
+Yi-6B,Balanced,Balanced,Balanced
+Yi-6B-Chat,Nostalgia *,Nostalgia *,Nostalgia *
+baichuan-7b-chat,Balanced,Nostalgia *,Nostalgia ***
+chatglm3-6b,Balanced,Balanced,Nostalgia ***
+command-r-plus,Nostalgia **,Nostalgia ***,Nostalgia ***
+falcon-rw-1b,Balanced,Balanced,Balanced
+gpt4_0613,Nostalgia ***,Nostalgia ***,Nostalgia ***
+gpt4_1106,Nostalgia ***,Nostalgia ***,Nostalgia ***
+gpt_3.5_turbo_0613,Balanced,Nostalgia ***,Nostalgia ***
+internlm-chat-7b,Nostalgia **,Balanced,Balanced
+llama2-7b-chat-hf,Balanced,Nostalgia ***,Nostalgia ***
+llama_hf_7b,Balanced,Nostalgia ***,Nostalgia **
+mistral-7b-v0.1,Neophilia *,Nostalgia **,Nostalgia ***
+opt-13b,Balanced,Nostalgia ***,Nostalgia **
+opt-2.7b,Balanced,Neophilia *,Balanced
+phi-1_5,Nostalgia *,Nostalgia **,Nostalgia ***
+phi-2,Nostalgia **,Balanced,Nostalgia *
+pythia-12b,Neophilia **,Nostalgia ***,Nostalgia ***
+zephyr-7b-beta,Nostalgia *,Nostalgia ***,Nostalgia ***
+zhongjing-base,Balanced,Balanced,Nostalgia ***

@@ -1,0 +1,2 @@
+Model_x,Release Date,model,MMLU,GSM8,Humanities,SocialSciences,STEM,Other,Longbench,Question,Model_y,Start Time,End Time,Acc,Right Possibility
+xverse-13b,2023-08-06,xverse-13b,55.1,18.0,,,,,,,,,,,
