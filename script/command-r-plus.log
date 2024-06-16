@@ -3,9 +3,9 @@ initializing...
 model name:  cohere/command-r-plus
 num of api_key:  1
 making dir
-/mntnfs/med_data5/chenghao/gpt4_distil/test/0526/gjo_gpt_answer/cohere/command-r-plus/
+path_to/gpt4_distil/test/0526/gjo_gpt_answer/cohere/command-r-plus/
 Loaded data len: 2418
-args.input_path############ /mntnfs/med_data5/chenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl
+args.input_path############ path_to/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl
 initialized
 ----------------------------------------
 ----------------------------------------
@@ -2446,6 +2446,6 @@ scored
 ----------------------------------------
 ----------------------------------------
 postprocessing...
-merged_path is  /mntnfs/med_data5/chenghao/gpt4_distil/test/0526/gjo_gpt_answer/cohere/command-r-plus/response/gjo_with_output.json
+merged_path is  path_to/gpt4_distil/test/0526/gjo_gpt_answer/cohere/command-r-plus/response/gjo_with_output.json
 postprocessed
 ----------------------------------------

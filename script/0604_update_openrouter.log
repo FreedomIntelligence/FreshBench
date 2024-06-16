@@ -4,8 +4,8 @@
 csv_lines: 2533, current_gjo_lines: 2532
 Already finished cohere/command-r-plus
 delta_lines: 0
-time python gjo_gpt.py         --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240601/gjo_gpt_answer         --model cohere/command-r-plus         --time_out 300         --processes_num 3         --test_num 0         --input_is_folder 0 >> /mntnfs/med_data5/zhuchenghao/gpt4_distil/logs/command-r-plus.log
-python gjo_judge.py --ModelName command-r-plus          --json_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240601/gjo_gpt_answer/cohere/command-r-plus/response/gjo_with_output.json         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/answer_csv
+time python gjo_gpt.py         --input_path path_to/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path path_to/gpt4_distil/test/20240601/gjo_gpt_answer         --model cohere/command-r-plus         --time_out 300         --processes_num 3         --test_num 0         --input_is_folder 0 >> path_to/gpt4_distil/logs/command-r-plus.log
+python gjo_judge.py --ModelName command-r-plus          --json_path path_to/gpt4_distil/test/20240601/gjo_gpt_answer/cohere/command-r-plus/response/gjo_with_output.json         --output_path path_to/gpt4_distil/answer_csv
 this pair is: A 
 output:len3: A
 this pair is: B 
@@ -151,8 +151,8 @@ output:len3: D
     
 csv_lines: 2532, current_gjo_lines: 2532
 delta_lines: 1
-time python gjo_gpt.py         --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240601/gjo_gpt_answer         --model deepseek/deepseek-chat         --time_out 300         --processes_num 3         --test_num 1         --input_is_folder 0 >> /mntnfs/med_data5/zhuchenghao/gpt4_distil/logs/DeepSeek-V2-Chat.log
-python gjo_judge.py --ModelName DeepSeek-V2-Chat          --json_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240601/gjo_gpt_answer/deepseek/deepseek-chat/response/gjo_with_output.json         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/answer_csv
+time python gjo_gpt.py         --input_path path_to/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path path_to/gpt4_distil/test/20240601/gjo_gpt_answer         --model deepseek/deepseek-chat         --time_out 300         --processes_num 3         --test_num 1         --input_is_folder 0 >> path_to/gpt4_distil/logs/DeepSeek-V2-Chat.log
+python gjo_judge.py --ModelName DeepSeek-V2-Chat          --json_path path_to/gpt4_distil/test/20240601/gjo_gpt_answer/deepseek/deepseek-chat/response/gjo_with_output.json         --output_path path_to/gpt4_distil/answer_csv
 this pair is: G 
 output:len18: G. Lyon (France)
 this pair is: D 
@@ -287,8 +287,8 @@ output:len27: D. Not before 1 July 2024
 csv_lines: 2533, current_gjo_lines: 2532
 Already finished qwen/qwen-110b-chat
 delta_lines: 0
-time python gjo_gpt.py         --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240601/gjo_gpt_answer         --model qwen/qwen-110b-chat         --time_out 300         --processes_num 3         --test_num 0         --input_is_folder 0 >> /mntnfs/med_data5/zhuchenghao/gpt4_distil/logs/Qwen1.5-110b-chat.log
-python gjo_judge.py --ModelName Qwen1.5-110b-chat          --json_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240601/gjo_gpt_answer/qwen/qwen-110b-chat/response/gjo_with_output.json         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/answer_csv
+time python gjo_gpt.py         --input_path path_to/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path path_to/gpt4_distil/test/20240601/gjo_gpt_answer         --model qwen/qwen-110b-chat         --time_out 300         --processes_num 3         --test_num 0         --input_is_folder 0 >> path_to/gpt4_distil/logs/Qwen1.5-110b-chat.log
+python gjo_judge.py --ModelName Qwen1.5-110b-chat          --json_path path_to/gpt4_distil/test/20240601/gjo_gpt_answer/qwen/qwen-110b-chat/response/gjo_with_output.json         --output_path path_to/gpt4_distil/answer_csv
 this pair is: E 
 output:len3: E
 this pair is: G 

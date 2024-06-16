@@ -386,7 +386,6 @@ Yi-6B & 0.333 & Right-skewed & & \\
 chatglm3-6b & 0.352 & Right-skewed & & \\
 \bottomrule
 \end{tabular}
-\caption{\chenghao{latter will filter the name}
 }
 \label{tab:model_bias}
 \end{table}
@@ -757,8 +756,8 @@ sss=cdf_gen_acc
 
 import pandas as pd
 
-# data=pd.read_csv('/mntnfs/med_data5/chenghao/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff.csv',index_col=None)
-data=pd.read_csv('/mntnfs/med_data5/chenghao/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff_cdf.csv',index_col=None)
+# data=pd.read_csv('path_to/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff.csv',index_col=None)
+data=pd.read_csv('path_to/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff_cdf.csv',index_col=None)
 
 
 # breakpoint()
@@ -1002,7 +1001,7 @@ zhongjing-base & Balanced & Balanced & Nostalgia *** \\
 \end{tabular}'''
 sss=classify
 
-# /mntnfs/med_data5/zhuchenghao/gpt4_distil/analysis/future_p1p2/classify_gen.py
+# path_to/gpt4_distil/analysis/future_p1p2/classify_gen.py
 classify_gen=r'''\begin{tabular}{lll}
 \toprule
 period & [(0,6), (-20, 0)] & [(6, 12), (-20, 0)] \\
@@ -1078,5 +1077,5 @@ print('to return!!!!!!!!!!!!!!')
 print(parse_possible_name(sss.replace('nan','-')))
 
 '''
-python /mntnfs/med_data5/zhuchenghao/gpt4_distil/standard_name.py
+python path_to/gpt4_distil/standard_name.py
 '''

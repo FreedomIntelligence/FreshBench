@@ -139,7 +139,7 @@ Gemini-pro & 0.71 & -15.15 & -41.28 & - & - & -28.21 \\
 
 
 '''
-cd /mntnfs/med_data5/zhuchenghao/gpt4_distil/
+cd path_to/gpt4_distil/
 python reorder.py
 '''
 table_past_bias=r'''Baichuan2-13B-Base & Nostalgia ** & Nostalgia *** & Nostalgia *** \\

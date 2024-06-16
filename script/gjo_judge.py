@@ -111,8 +111,8 @@ def judge_acc(question_info):
     return acc
 
 def change_one_json_csv(ModelName='gpt4_1106',Release_Date=None,
-                        json_path='/mntnfs/med_data5/chenghao/gpt4_distil/test/gjo_transformed_questions.jsonl',
-                        output_path='/mntnfs/med_data5/chenghao/gpt4_distil/answer_csv'):
+                        json_path='path_to/gpt4_distil/test/gjo_transformed_questions.jsonl',
+                        output_path='path_to/gpt4_distil/answer_csv'):
     
 
     # breakpoint()

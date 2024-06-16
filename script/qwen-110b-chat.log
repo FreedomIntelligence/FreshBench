@@ -3,9 +3,9 @@ initializing...
 model name:  qwen/qwen-110b-chat
 num of api_key:  1
 making dir
-/mntnfs/med_data5/chenghao/gpt4_distil/test/0526/gjo_gpt_answer/qwen/qwen-110b-chat/
+path_to/gpt4_distil/test/0526/gjo_gpt_answer/qwen/qwen-110b-chat/
 Loaded data len: 2418
-args.input_path############ /mntnfs/med_data5/chenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl
+args.input_path############ path_to/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl
 initialized
 ----------------------------------------
 ----------------------------------------
@@ -2512,6 +2512,6 @@ scored
 ----------------------------------------
 ----------------------------------------
 postprocessing...
-merged_path is  /mntnfs/med_data5/chenghao/gpt4_distil/test/0526/gjo_gpt_answer/qwen/qwen-110b-chat/response/gjo_with_output.json
+merged_path is  path_to/gpt4_distil/test/0526/gjo_gpt_answer/qwen/qwen-110b-chat/response/gjo_with_output.json
 postprocessed
 ----------------------------------------
