@@ -26,13 +26,13 @@ fill /script/base-url.txt and /script/api-key.txt
 
 fill the model names in `pipeline_api.sh`
 
-`bash /pipeline_api.sh`
+`bash ./pipeline_api.sh`
 
 #### local:
 
 fill the model names in `pipeline_local.sh`
 
-`bash /pipeline_local.sh`
+`bash ./pipeline_local.sh`
 
 ### answer will be at /answer_csv/model_name.csv
 
