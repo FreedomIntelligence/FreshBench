@@ -1,10 +1,11 @@
 #!/bin/bash
 
-base_path=paths/Freshbench_release/
+base_path=$(pwd)"/"
+echo $base_path
 
 
 current_gjo_file_path="${base_path}test/raw_question/gjo_transformed_questions_no_output.jsonl"
-gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json
+gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 
 # python update_from_crawl.py \
