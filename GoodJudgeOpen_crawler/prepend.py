@@ -7,7 +7,7 @@ def prepend(file_up_path, file_down_path,file_final_path,specific_strategy=None)
         # breakpoint()
         
         if specific_strategy == 'del_down_first_line':
-            breakpoint()
+            
             content_down = f.read().split('\n',1)[1]
         else:
             content_down = f.read()
