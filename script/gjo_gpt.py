@@ -8,7 +8,7 @@ import json
 import time
 import argparse
 
-import openai_secrets 
+# import openai_secrets 
 
 def initialize(args):
     bot_manager = BotManager()

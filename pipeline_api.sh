@@ -24,7 +24,7 @@ today=$(date +%Y%m%d)
 
 declare -A model_to_log=(
     # openrouter api
-    ["deepseek/deepseek-chat"]="DeepSeek-V2-Chat"
+    # ["deepseek/deepseek-chat"]="DeepSeek-V2-Chat"
     ["mistralai/mixtral-8x22b-instruct"]="Mixtral-8x22B-Instruct-v0.1"
     ["qwen/qwen-110b-chat"]="Qwen1.5-110b-chat"
     ["cohere/command-r-plus"]="command-r-plus"
@@ -45,7 +45,7 @@ for model in "${!model_to_log[@]}"; do
     Running model: $model
     "
     
-    csv_lines=$(cat "${base_path}answer_csv/gjo_${log_file}.csv" | wc -l)
+    csv_lines=$(cat "${base_path}/answer_csv/gjo_${log_file}.csv" | wc -l)
     current_gjo_lines=$(cat "$current_gjo_file_path" | wc -l)
     echo "csv_lines: $csv_lines, current_gjo_lines: $current_gjo_lines"
 

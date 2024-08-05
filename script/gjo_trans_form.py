@@ -67,7 +67,7 @@ def construct_whole_dic(item,unique_idx):
 
 
 
-with open('path_to/gpt4_distil/test/test.json', 'r') as file:
+with open('./test/test.json', 'r') as file:
     input_data = [json.loads(line) for line in file]
 # 准备转换的数据
 transformed_data = []
@@ -84,7 +84,7 @@ for item in input_data:
     
     
 # 指定输出文件位置
-output_file_path = "path_to/gpt4_distil/test/gjo_transformed_questions.jsonl"
+output_file_path = "./test/gjo_transformed_questions.jsonl"
 
 # 将转换后的数据写入指定的jsonl文件
 with open(output_file_path, "w") as outfile:
