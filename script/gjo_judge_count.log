@@ -50,3 +50,6 @@ Phi-3-mini-4k-instruct@path/gpt4_distil/answer_csv#250/2532=0.09873617693522907 
 Mixtral-8x22B-Instruct-v0.1@path/gpt4_distil/answer_csv#42/2532=0.016587677725118485 can not find answer or found I,
 Mixtral-8x22B-Instruct-v0.1@path/gpt4_distil/answer_csv#42/2532=0.016587677725118485 can not find answer or found I,
 Mixtral-8x22B-Instruct-v0.1@path/gpt4_distil/answer_csv#42/2532=0.016587677725118485 can not find answer or found I,
+Phi-3-mini-4k-instruct@/mntnfs/med_data5/zhuchenghao/test_release/FreshBench/answer_csv_2#250/2532=0.09873617693522907 can not find answer or found I,
+Phi-3-mini-4k-instruct@/mntnfs/med_data5/zhuchenghao/test_release/FreshBench/answer_csv_2#250/2532=0.09873617693522907 can not find answer or found I,
+Phi-3-mini-4k-instruct@/mntnfs/med_data5/zhuchenghao/test_release/FreshBench/answer_csv#250/2532=0.09873617693522907 can not find answer or found I,

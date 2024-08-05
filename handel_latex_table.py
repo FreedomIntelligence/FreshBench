@@ -6,10 +6,10 @@ from standard_name import parse_possible_name
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--txt_path', type=str, default='/mntnfs/med_data5/zhuchenghao/gpt4_distil/analysis/complex_acc_latex/latex_gray.txt')
+parser.add_argument('--txt_path', type=str, default='path_to/gpt4_distil/analysis/complex_acc_latex/latex_gray.txt')
 args=parser.parse_args()
 txt_path=args.txt_path
-# txt_path='/mntnfs/med_data5/zhuchenghao/gpt4_distil/analysis/complex_acc_latex/latex_gray.txt'
+# txt_path='path_to/gpt4_distil/analysis/complex_acc_latex/latex_gray.txt'
 
 with open(txt_path,'r') as f:
     sss=f.read()
@@ -29,5 +29,5 @@ with open(txt_path,'r') as f:
 
 
 '''
-python /mntnfs/med_data5/zhuchenghao/gpt4_distil/handel_latex_table.py
+python path_to/gpt4_distil/handel_latex_table.py
 '''

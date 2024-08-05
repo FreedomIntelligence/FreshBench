@@ -166,7 +166,7 @@ def wr_gjo(config=None):
         config['save_path']='./gjo_tmp.jsonl'
     config['headless']=False
     config['last_10_url_list']=get_last_10_url_list()
-    breakpoint()    
+       
 
     with sync_playwright() as playwright:
         run(playwright,config)

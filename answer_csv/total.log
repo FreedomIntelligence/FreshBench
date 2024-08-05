@@ -1,4 +1,4 @@
-(fastllm) [zhuchenghao@pbcmlg01 script]$ python /mntnfs/med_data5/zhuchenghao/gpt4_distil/drafts/get_accs.py
+(fastllm) [zhuchenghao@pbcmlg01 script]$ python path_to/gpt4_distil/drafts/get_accs.py
 gjo_Mixtral-8x22B-Instruct-v0.1.csv: 2533 lines
 data["Acc"].mean(): 0.11216429699842022 
 

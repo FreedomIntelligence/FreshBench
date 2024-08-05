@@ -92,18 +92,3 @@ if __name__ == "__main__":
     )
     process_file(args.input_path, args.output_path, model, tokenizer, system_prompt,args.test_num,model_name=args.model)
 
-'''
-python gjo_hf_local.py --model_path "/mntcephfs/data/med/chenghao/models/phi-2"\
-                    --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl"\
-                    --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output_output.jsonl"\
-
-
-time python gjo_hf_local.py         --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240602/gjo_local_answer         --model /mntcephfs/data/med/zhanghongbo/MOSS/cjy/model/Baichuan2-13B-Base         --test_num 114         
->> /mntnfs/med_data5/zhuchenghao/gpt4_distil/logs/Baichuan2-13B-Base.log
-
-
-cd /mntnfs/med_data5/zhuchenghao/gpt4_distil/script
-time python gjo_hf_local.py         --input_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/raw_question/gjo_transformed_questions_no_output.jsonl         --output_path /mntnfs/med_data5/zhuchenghao/gpt4_distil/test/20240602/gjo_local_answer         --model_path /mntcephfs/data/med/chenghao/models/phi-2         --model phi-2         --test_num 114         
->> /mntnfs/med_data5/zhuchenghao/gpt4_distil/logs/phi-2.log
-
-'''
