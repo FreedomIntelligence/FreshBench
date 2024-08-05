@@ -1,10 +1,11 @@
 #!/bin/bash
 
-base_path=paths/Freshbench_release/
+# paths/Freshbench_release/
+base_path="./"
 
 
 current_gjo_file_path="${base_path}test/raw_question/gjo_transformed_questions_no_output.jsonl"
-gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json
+gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 
 # python update_from_crawl.py \
@@ -21,10 +22,10 @@ today=$(date +%Y%m%d)
 
 declare -A model_to_log=(
     # openrouter api
-    # ["deepseek/deepseek-chat"]="DeepSeek-V2-Chat"
+    ["deepseek/deepseek-chat"]="DeepSeek-V2-Chat"
     ["mistralai/mixtral-8x22b-instruct"]="Mixtral-8x22B-Instruct-v0.1"
-    # ["qwen/qwen-110b-chat"]="Qwen1.5-110b-chat"
-    # ["cohere/command-r-plus"]="command-r-plus"
+    ["qwen/qwen-110b-chat"]="Qwen1.5-110b-chat"
+    ["cohere/command-r-plus"]="command-r-plus"
 
 
     # gpt-4-0613
