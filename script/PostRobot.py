@@ -61,14 +61,18 @@ class PostRobot:
             print("response decode error")
             # breakpoint()
             return None
-        # import pdb
-        # pdb.set_trace()
+        # breakpoint()
         print('response:', response)
         try:
             content = response["choices"][0]["message"]["content"]
         except:
-            content = response["error"]["code"]
-            print(f"api key: {self.api_key}, org: {self.org}, error code: {content}")
+            if "error" in response.keys() and "code" in response["error"].keys():
+                content = response["error"]["code"]
+                print(f"api key: {self.api_key}, org: {self.org}, error code: {content}")
+            else:
+                print(f"response not have error")
+                print(f'api key: {self.api_key}, org: {self.org}, response: {response}')
+
         if content is None:
             print("content is None")
             return None

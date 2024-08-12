@@ -20,22 +20,30 @@ gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 
 today=$(date +%Y%m%d)
-# today="20240601"
+# today="20240811"
 
 declare -A model_to_log=(
     # openrouter api
     # ["deepseek/deepseek-chat"]="DeepSeek-V2-Chat"
-    ["mistralai/mixtral-8x22b-instruct"]="Mixtral-8x22B-Instruct-v0.1"
-    ["qwen/qwen-110b-chat"]="Qwen1.5-110b-chat"
-    ["cohere/command-r-plus"]="command-r-plus"
+    # ["mistralai/mixtral-8x22b-instruct"]="Mixtral-8x22B-Instruct-v0.1"
+    # ["qwen/qwen-110b-chat"]="Qwen1.5-110b-chat"
+    # ["cohere/command-r-plus"]="command-r-plus"
+
+    # ["qwen/qwen-2-72b-instruct"]="Qwen2-72b-Instruct" #0811
+    # ['01-ai/yi-large']="Yi-large"
+    # ['meta-llama/llama-3.1-405b-instruct']="llama-3.1-405b-instruct"
 
 
-    # gpt-4-0613
-    # gpt-4-1106-preview
-    # gpt-3.5-turbo-0613
     # ["gpt-3.5-turbo-0613"]="gpt_3.5_turbo_0613"
     # ["gpt-4-0613"]="gpt4_0613"
     # ["gpt-4-1106-preview"]="gpt4_1106"
+
+    # ['gemini-1.5-pro']="Gemini-1.5-Pro"
+    # ['claude-3-5-sonnet-20240620']="Claude-3.5-Sonnet-20240620"
+    # ['gpt-4o']="GPT-4o"
+    # ['gpt-4o-mini-2024-07-18']="GPT-4o-mini-2024-07-18"
+
+
 )
 
 cd $base_path/script
@@ -91,4 +99,3 @@ for model in "${!model_to_log[@]}"; do
 
 
 done
-

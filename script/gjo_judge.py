@@ -134,9 +134,25 @@ def change_one_json_csv(ModelName='gpt4_1106',Release_Date=None,
 
 
         else:
+            model_name_date_dic={
+                'phi1.5':'2023-10-24',
+                'llama-3.1-405b-instruct':'2024-07-23',#[meta-llama/Meta-Llama-3.1-405B-Instruct · Hugging Face](https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct)
+                'Qwen2-72b-Instruct':'2024-05-28',#[Commits · Qwen/Qwen2-72B-Instruct](https://huggingface.co/Qwen/Qwen2-72B-Instruct/commits/main)
+                'Yi-large':'2024-06-16',#[01.AI Yi-Large LLM Launch - 01.AI Blog](https://01-ai.github.io/blog.html?post=en/2024-06-16-yi-large-llm-launch.md)
+
+                'GPT-4o-mini-2024-07-18':'2024-07-18',
+                'GPT-4o':'2024-08-06',#but its data...?[Models - OpenAI API](https://platform.openai.com/docs/models/gpt-4o)
+                'Claude-3.5-Sonnet-20240620':'2024-06-20',
+                "Gemini-1.5-Pro":'2024-05-24',#[Model versions and lifecycle  |  Generative AI on Vertex AI  |  Google Cloud](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)
+
+            }
+
             # Release_Date='2023-10-24'# phi1.5
             # Release_Date='2024-04-23'
-            assert False,'Release_Date is None and no existing file, specify it in pipeline'
+            if ModelName in model_name_date_dic:
+                Release_Date=model_name_date_dic[ModelName]
+            else:
+                assert False,'Release_Date is None and no existing file, specify it in pipeline'
             # Release_Date=float('nan')
         
     
