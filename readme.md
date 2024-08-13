@@ -8,8 +8,9 @@ There is a readme.md and a pipeline.sh.
 You can crawl the data incrementally using playwright by yourself, then you can update the current gjo file from crawler.
 
 ```
+base_path="./"
 current_gjo_file_path="${base_path}test/raw_question/gjo_transformed_questions_no_output.jsonl"
-gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json
+gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 python update_from_crawl.py \
     --gjo_raw_crawl_file_path "$gjo_raw_crawl_file_path" \
@@ -34,7 +35,7 @@ fill the model names in `pipeline_local.sh`
 
 `bash ./pipeline_local.sh`
 
-### answer will be at /answer_csv/model_name.csv
+### answer will be at /answer_csv/<model_name>.csv
 
 
 ### classify Nostalgia and Neophilia

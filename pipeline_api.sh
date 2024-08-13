@@ -20,7 +20,7 @@ gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 
 today=$(date +%Y%m%d)
-# today="20240811"
+today="20240812"
 
 declare -A model_to_log=(
     # openrouter api
@@ -38,7 +38,7 @@ declare -A model_to_log=(
     # ["gpt-4-0613"]="gpt4_0613"
     # ["gpt-4-1106-preview"]="gpt4_1106"
 
-    # ['gemini-1.5-pro']="Gemini-1.5-Pro"
+    ['gemini-1.5-pro']="Gemini-1.5-Pro"
     # ['claude-3-5-sonnet-20240620']="Claude-3.5-Sonnet-20240620"
     # ['gpt-4o']="GPT-4o"
     # ['gpt-4o-mini-2024-07-18']="GPT-4o-mini-2024-07-18"

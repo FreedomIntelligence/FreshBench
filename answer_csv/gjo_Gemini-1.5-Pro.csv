@@ -1,2 +1,0 @@
-Model_x,Release Date,model,MMLU,GSM8,Humanities,SocialSciences,STEM,Other,Longbench,Question,Model_y,Start Time,End Time,Acc,Right Possibility
-Gemini-1.5-Pro,2024-05-24,Gemini-1.5-Pro,,,,,,,,"This Question is proposed on 2020-02-07. Between 7 February 2020 and 30 June 2020, will a lethal confrontation in Libya result in eight or more fatalities for Turkish armed forces?",Gemini-1.5-Pro,2020-02-07,2020-07-01,0,0

@@ -230,8 +230,8 @@ def change_one_json_csv(ModelName='gpt4_1106',Release_Date=None,
     # breakpoint()
     # Write the DataFrame to a CSV file
     
-    # if os.path.exists(output_filename):
-    #     df=pd.concat([df,orig_df],axis=0)
+    if os.path.exists(output_filename):
+        df=pd.concat([df,orig_df],axis=0)
     # else:
     #     pass
 
