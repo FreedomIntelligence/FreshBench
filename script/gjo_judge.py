@@ -56,7 +56,9 @@ def judge_acc(question_info):
     chosen_letter=None
     acc=None
     found_place=None
-    regix=r"(?:\.|is|guess|guessing|choose|choosing|:)?\s+([A-Z])[.,:\s]"
+    # regix=r"(?:\.|is|guess|guessing|choose|choosing|:)?\s+([A-Z])[.,:\s]"
+    regix = r"(?:\.|is|guess|guessing|choose|choosing|\*\*|:)?\s*([A-Z])(?:[.,:\s]|\*\*)?"
+    
     output_without_I=output.replace('I','i').replace('"',' ').replace("'",' ')
 
     # output_without_I=output.replace('I','i')

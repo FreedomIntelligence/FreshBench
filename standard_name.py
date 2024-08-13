@@ -69,6 +69,8 @@ def parse_possible_name(given_name:str)->str:
         given_name=given_name.replace('command-r-plus','Command R+')
     if 'gpt4_0613' in given_name:
         given_name=given_name.replace('gpt4_0613','GPT-4-230613')
+    if 'instruct' in given_name:
+        given_name=given_name.replace('instruct','Instruct')
 
     
 
@@ -751,18 +753,13 @@ Gemini & 0.71 & -15.15 & -41.28 & nan & nan & -28.21 \\
 '''
 
 
-sss=cdf_gen_acc
 
-
-import pandas as pd
-
-# data=pd.read_csv('path_to/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff.csv',index_col=None)
-data=pd.read_csv('path_to/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff_cdf.csv',index_col=None)
-
-
-# breakpoint()
-data=data.iloc[:,1:]
-data['slope']=data['slope']*1000
+# sss=cdf_gen_acc
+# # data=pd.read_csv('path_to/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff.csv',index_col=None)
+# data=pd.read_csv('path_to/fresh_eval/vis/Z_score/Z_score_use_start_b4cutoff_cdf.csv',index_col=None)
+# # breakpoint()
+# data=data.iloc[:,1:]
+# data['slope']=data['slope']*1000
 
 def get_bias(data,pos_thres=1,neg_thres=-1):
     if data>pos_thres:
@@ -772,10 +769,9 @@ def get_bias(data,pos_thres=1,neg_thres=-1):
     else:
         return 'Symmetrical'
     
-data['bias category']=data['slope'].apply(lambda x: get_bias(x))
-
-data=data.apply(lambda x: x.apply(lambda y: f'{y:.2f}' if isinstance(y, float) else y))
-sss=data.to_latex(index=False)
+# data['bias category']=data['slope'].apply(lambda x: get_bias(x))
+# data=data.apply(lambda x: x.apply(lambda y: f'{y:.2f}' if isinstance(y, float) else y))
+# sss=data.to_latex(index=False)
 
 
 # ----------------------
@@ -1071,10 +1067,9 @@ pythia-12b & \cellcolor{gray!25}0.4801 & 0.4955 & 0.3546** & 0.4162* & 0.3507** 
 zephyr-7b-beta & \cellcolor{gray!25}0.4043 & \cellcolor{gray!25}0.4324 & \cellcolor{gray!25}0.3121 & 0.3135 & 0.2836 \\
 zhongjing-base & \cellcolor{gray!25}0.3971 & \cellcolor{gray!25}0.3784 & 0.1844 & 0.3243 & 0.3433 \\'''
 
-
-sss=gray_time
-print('to return!!!!!!!!!!!!!!')
-print(parse_possible_name(sss.replace('nan','-')))
+# sss=gray_time
+# print('to return!!!!!!!!!!!!!!')
+# print(parse_possible_name(sss.replace('nan','-')))
 
 '''
 python path_to/gpt4_distil/standard_name.py

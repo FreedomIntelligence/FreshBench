@@ -39,6 +39,8 @@ declare -A model_to_log=(
     # ["gpt-4-1106-preview"]="gpt4_1106"
 
     ['gemini-1.5-pro']="Gemini-1.5-Pro"
+    # ['gemini-1.5-pro-flash']="Gemini-1.5-Pro-flash"
+
     # ['claude-3-5-sonnet-20240620']="Claude-3.5-Sonnet-20240620"
     # ['gpt-4o']="GPT-4o"
     # ['gpt-4o-mini-2024-07-18']="GPT-4o-mini-2024-07-18"
@@ -75,15 +77,15 @@ for model in "${!model_to_log[@]}"; do
         --test_num $delta_lines \
         --input_is_folder 0 >> ${base_path}logs/${log_file}.log"
 
-    echo "calling model api..."
-    time python gjo_gpt.py \
-        --input_path "$current_gjo_file_path" \
-        --output_path "${base_path}test/${today}/gjo_gpt_answer" \
-        --model "${model}" \
-        --time_out 300 \
-        --processes_num 3 \
-        --test_num "$delta_lines" \
-        --input_is_folder 0 >> "${base_path}logs/${log_file}.log"
+    # echo "calling model api..."
+    # time python gjo_gpt.py \
+    #     --input_path "$current_gjo_file_path" \
+    #     --output_path "${base_path}test/${today}/gjo_gpt_answer" \
+    #     --model "${model}" \
+    #     --time_out 300 \
+    #     --processes_num 3 \
+    #     --test_num "$delta_lines" \
+    #     --input_is_folder 0 >> "${base_path}logs/${log_file}.log"
 
 
     # delta_lines=2535

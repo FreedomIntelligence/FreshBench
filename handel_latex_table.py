@@ -29,5 +29,6 @@ with open(txt_path,'r') as f:
 
 
 '''
-python path_to/gpt4_distil/handel_latex_table.py
+
+
 '''

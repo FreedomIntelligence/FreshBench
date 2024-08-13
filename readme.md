@@ -63,3 +63,30 @@ python analysis/classify.py
 gpt4_1106 & Nostalgia *** & Nostalgia *** & Nostalgia *** \\
 gpt_3.5_turbo_0613 & Balanced & Nostalgia *** & Nostalgia *** \\
 ```
+
+
+
+
+
+<!-- 
+
+export PYTHONPATH="/mntnfs/med_data5/zhuchenghao/Freshbench_release/"
+
+
+# extract files from ./answer_csv , and get a grey latex
+cd /mntnfs/med_data5/zhuchenghao/Freshbench_release/analysis/complex_acc_latex
+python acc_p1p2.py
+
+
+cd /mntnfs/med_data5/zhuchenghao/Freshbench_release/
+python /mntnfs/med_data5/zhuchenghao/Freshbench_release/analysis/complex_acc_latex/merge_grey.py
+
+
+python get_mean_acc_b4release.py
+python /mntnfs/med_data5/zhuchenghao/Freshbench_release/handel_latex_table.py
+
+
+python /mntnfs/med_data5/zhuchenghao/Freshbench_release/handel_latex_table.py --txt_path /mntnfs/med_data5/zhuchenghao/Freshbench_release/analysis/complex_acc_latex/latex_gray.txt 
+
+
+-->
