@@ -32,18 +32,27 @@ declare -A model_to_log=(
     # ["qwen/qwen-2-72b-instruct"]="Qwen2-72b-Instruct" #0811
     # ['01-ai/yi-large']="Yi-large"
     # ['meta-llama/llama-3.1-405b-instruct']="llama-3.1-405b-instruct"
+    # ['google/gemini-pro']='Gemini'
 
 
     # ["gpt-3.5-turbo-0613"]="gpt_3.5_turbo_0613"
     # ["gpt-4-0613"]="gpt4_0613"
     # ["gpt-4-1106-preview"]="gpt4_1106"
 
-    ['gemini-1.5-pro']="Gemini-1.5-Pro"
+    # ['gemini-1.5-pro']="Gemini-1.5-Pro"
     # ['gemini-1.5-pro-flash']="Gemini-1.5-Pro-flash"
 
     # ['claude-3-5-sonnet-20240620']="Claude-3.5-Sonnet-20240620"
     # ['gpt-4o']="GPT-4o"
     # ['gpt-4o-mini-2024-07-18']="GPT-4o-mini-2024-07-18"
+
+
+
+
+    ['gemini-1.5-flash']='Gemini-1.5-flash'
+    # ['claclaude-3-haiku-20240307']="Claude-3-haiku-20240307"
+    # ['claude-3-opus-20240229']='Claude-3-opus-20240229'
+    # ['claude-3-sonnet-20240229']='Claude-3-sonnet-20240229'
 
 
 )

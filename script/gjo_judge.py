@@ -146,6 +146,13 @@ def change_one_json_csv(ModelName='gpt4_1106',Release_Date=None,
                 'GPT-4o':'2024-08-06',#but its data...?[Models - OpenAI API](https://platform.openai.com/docs/models/gpt-4o)
                 'Claude-3.5-Sonnet-20240620':'2024-06-20',
                 "Gemini-1.5-Pro":'2024-05-24',#[Model versions and lifecycle  |  Generative AI on Vertex AI  |  Google Cloud](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)
+                'Claude-3-haiku-20240307':'2024-03-07',
+                'Claude-3-opus-20240229':'2024-02-29',
+                'Claude-3-sonnet-20240229':'2024-02-29',
+                'Gemini-1.5-flash':'2024-05-24',
+
+                'Gemini':'2024-02-15',#[Model versions and lifecycle  |  Generative AI on Vertex AI  |  Google Cloud](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)
+
 
             }
 

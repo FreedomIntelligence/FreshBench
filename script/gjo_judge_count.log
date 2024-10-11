@@ -70,3 +70,7 @@ Qwen2-72b-Instruct@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#1
 gpt4_0613@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#5/79=0.06329113924050633 can not find answer or found I,
 Gemini-1.5-Pro@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#729/2611=0.27920337035618537 can not find answer or found I,
 Gemini-1.5-Pro@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#3/2611=0.0011489850631941786 can not find answer or found I,
+Gemini@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#2/468=0.004273504273504274 can not find answer or found I,
+Claude-3-opus-20240229@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#187/2611=0.07162006893910379 can not find answer or found I,
+Claude-3-sonnet-20240229@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#1/2611=0.00038299502106472615 can not find answer or found I,
+Gemini-1.5-flash@/mntnfs/med_data5/zhuchenghao/Freshbench_release/answer_csv#12/2611=0.004595940252776714 can not find answer or found I,
