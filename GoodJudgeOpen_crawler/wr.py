@@ -68,7 +68,9 @@ def get_last_10_url_list():
 
 def run(playwright,config):
     # browser = playwright.chromium.launch(headless=False)
-    browser = playwright.chromium.launch(headless=config['headless'],executable_path='C:\Program Files\Google\Chrome\Application\chrome.exe')
+    browser = playwright.chromium.launch(headless=config['headless'],)
+                                        #  executable_path='/usr/bin/chromium-browser')
+                                        #  executable_path='C:\Program Files\Google\Chrome\Application\chrome.exe')
 
     context = browser.new_context()
     
@@ -76,8 +78,8 @@ def run(playwright,config):
     page.goto(f"https://www.gjopen.com/leaderboards/questions", timeout=120000)
 
 
-    usr_name=None
-    Password=None
+    usr_name=os.getenv('gjo_usr_name') or None
+    Password=os.getenv('gjo_password') or None
 
 
     if usr_name is None:

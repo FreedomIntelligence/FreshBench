@@ -15,7 +15,7 @@ python prepend.py --file_down_path='gjo.jsonl' --file_up_path='gjo_no_dup_tmp.js
 python prepend.py --file_down_path='gjo.csv' --file_up_path='gjo_tmp.csv' --file_final_path='gjo.csv' --specific_strategy='del_down_first_line'
 python prepend.py --file_down_path='gjo.json' --file_up_path='gjo_tmp.json' --file_final_path='gjo.json'
 
-rm gjo_tmp.json
+rm gjo_tmp.jsonl
 rm gjo_no_dup_tmp.jsonl
 rm gjo_tmp.csv
 rm gjo_tmp.json
@@ -24,3 +24,10 @@ echo "Pipeline finished and you get the final files: gjo.jsonl, gjo.csv, gjo.jso
 
 
 # export HF_ENDPOINT=https://hf-mirror.com
+
+# pip install pytest-playwright -i https://pypi.doubanio.com/simple
+# playwright install
+# apt update
+# apt install chromium-browser
+# which chromium-browser
+# /usr/bin/chromium-browser
