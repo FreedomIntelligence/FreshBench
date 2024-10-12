@@ -41,8 +41,22 @@ def add_delta_question_and_get_lines(gjo_raw_crawl_file_path='path/gjo.jsonl',
         for line in lines:
             line=json.loads(line)
             line=gjo_trans_form.construct_whole_dic(line,unique_idx+1)
-            line["input"]=add_time_fun_input(line)
-            line["Question"]=add_time_fun_question(line)
+            
+            if 'This Question is proposed on' not in line["input"]:
+                line["input"]=add_time_fun_input(line)
+                # print('not add input')
+            else:
+                # print('add input')
+                # breakpoint()
+                pass                
+
+            if 'This Question is proposed on' not in line["Question"]:
+                line["Question"]=add_time_fun_question(line)
+            else:
+                # print('add Question')
+                # breakpoint()
+                pass
+
             unique_idx+=1
             question=line["Question"]
 

@@ -30,6 +30,11 @@ def get_target(x):
 
 data['target']=data['Possible_Answers_dict'].apply(get_target)
 # to json
+# for i in data:
+#     i['Question'] = f"This Question is proposed on {i['Started_time']}. {i['Question']}"
+# data['Question']=f'This Question is proposed on {data["Started_time"]}. '+data['Question']
+data['Question'] = data.apply(lambda row: f'This Question is proposed on {row["Started_time"]}. {row["Question"]}', axis=1)
+
 data.to_json('gjo_tmp.json',orient='records',lines=True)
 '''
 like this

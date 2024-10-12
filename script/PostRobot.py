@@ -72,6 +72,7 @@ class PostRobot:
             else:
                 print(f"response not have error")
                 print(f'api key: {self.api_key}, org: {self.org}, response: {response}')
+                return None
 
         if content is None:
             print("content is None")

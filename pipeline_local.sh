@@ -14,14 +14,15 @@ gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 
 declare -a models=(
-    "/models/Phi-3-mini-4k-instruct"
+    # "/models/Phi-3-mini-4k-instruct"
+    
 )
 
 
 
 
 today=$(date +%Y%m%d)
-today=20240604
+# today=20240604
 
 cd $base_path/script
 
@@ -63,13 +64,13 @@ for model_path in "${models[@]}"; do
 
     # uncomment this to run 
 
-    # time python gjo_hf_local.py \
-    #     --input_path $current_gjo_file_path \
-    #     --output_path ${base_path}test/${today}/gjo_local_answer \
-    #     --model_path $model_path \
-    #     --model $log_file \
-    #     --test_num $delta_lines \
-    #     # >> "${base_path}logs/${log_file}.log"
+    time python gjo_hf_local.py \
+        --input_path $current_gjo_file_path \
+        --output_path ${base_path}test/${today}/gjo_local_answer \
+        --model_path $model_path \
+        --model $log_file \
+        --test_num $delta_lines \
+        # >> "${base_path}logs/${log_file}.log"
 
     # Judge the answers and append results to a CSV
     echo "time python gjo_judge.py --ModelName $log_file  \
@@ -82,6 +83,7 @@ for model_path in "${models[@]}"; do
     #     --json_path "${base_path}test/${today}/gjo_local_answer/${model_name}/gjo_with_output.json" \
     #     --output_path "${base_path}answer_csv" > "${base_path}logs/gjo_judge_${log_file}.log"
 
+    # sample for an existing model
     python gjo_judge.py --ModelName "$log_file" \
         --json_path "${base_path}test/${today}/gjo_local_answer/${model_name}/gjo_with_output.json" \
         --output_path "${base_path}answer_csv" > "${base_path}logs/gjo_judge_${log_file}.log"

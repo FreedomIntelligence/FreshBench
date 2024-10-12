@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+pip install openai
+
+
+
+
 # paths/Freshbench_release/
 # base_path="./"
 base_path=$(pwd)"/"
@@ -20,7 +26,7 @@ gjo_raw_crawl_file_path="${base_path}GoodJudgeOpen_crawler/gjo.json"
 
 
 today=$(date +%Y%m%d)
-today="20240812"
+today="20241011"
 
 declare -A model_to_log=(
     # openrouter api
@@ -29,10 +35,12 @@ declare -A model_to_log=(
     # ["qwen/qwen-110b-chat"]="Qwen1.5-110b-chat"
     # ["cohere/command-r-plus"]="command-r-plus"
 
-    # ["qwen/qwen-2-72b-instruct"]="Qwen2-72b-Instruct" #0811
+    ["qwen/qwen-2-72b-instruct"]="Qwen2-72b-Instruct" 
     # ['01-ai/yi-large']="Yi-large"
-    # ['meta-llama/llama-3.1-405b-instruct']="llama-3.1-405b-instruct"
-    # ['google/gemini-pro']='Gemini'
+    ['meta-llama/llama-3.1-405b-instruct']="llama-3.1-405b-instruct"
+    ['google/gemini-pro']='Gemini'
+
+
 
 
     # ["gpt-3.5-turbo-0613"]="gpt_3.5_turbo_0613"
@@ -46,10 +54,8 @@ declare -A model_to_log=(
     # ['gpt-4o']="GPT-4o"
     # ['gpt-4o-mini-2024-07-18']="GPT-4o-mini-2024-07-18"
 
+    # ['gemini-1.5-flash']='Gemini-1.5-flash'
 
-
-
-    ['gemini-1.5-flash']='Gemini-1.5-flash'
     # ['claclaude-3-haiku-20240307']="Claude-3-haiku-20240307"
     # ['claude-3-opus-20240229']='Claude-3-opus-20240229'
     # ['claude-3-sonnet-20240229']='Claude-3-sonnet-20240229'
@@ -86,15 +92,15 @@ for model in "${!model_to_log[@]}"; do
         --test_num $delta_lines \
         --input_is_folder 0 >> ${base_path}logs/${log_file}.log"
 
-    # echo "calling model api..."
-    # time python gjo_gpt.py \
-    #     --input_path "$current_gjo_file_path" \
-    #     --output_path "${base_path}test/${today}/gjo_gpt_answer" \
-    #     --model "${model}" \
-    #     --time_out 300 \
-    #     --processes_num 3 \
-    #     --test_num "$delta_lines" \
-    #     --input_is_folder 0 >> "${base_path}logs/${log_file}.log"
+    echo "calling model api..."
+    time python gjo_gpt.py \
+        --input_path "$current_gjo_file_path" \
+        --output_path "${base_path}test/${today}/gjo_gpt_answer" \
+        --model "${model}" \
+        --time_out 300 \
+        --processes_num 3 \
+        --test_num "$delta_lines" \
+        --input_is_folder 0 >> "${base_path}logs/${log_file}.log"
 
 
     # delta_lines=2535
@@ -110,3 +116,4 @@ for model in "${!model_to_log[@]}"; do
 
 
 done
+
