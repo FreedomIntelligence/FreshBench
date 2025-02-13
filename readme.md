@@ -90,10 +90,12 @@ python /mntnfs/med_data5/zhuchenghao/Freshbench_release/handel_latex_table.py --
 
 
 -->
-
+# Citation
+```
 @inproceeding{zhu2024freshbench,
   title={Is Your LLM Outdated? A Deep Look at Temporal Generalization},
   author={Chenghao Zhu and Nuo Chen and Yufei Gao and Yunyi Zhang and Prayag Tiwari and Benyou Wang},
   booktitle = {Proceedings of the 2025 Conference of the North American Chapter of the Association for Computational Linguistics},
   year={2024}
 }
+```
